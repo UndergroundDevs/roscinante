@@ -18,9 +18,6 @@ const GlobalStyle = createGlobalStyle`
 
   html, body, #__next {
     height: 100%;
-
-    background-color: var(--highlight);
-    color: var(--highlight);
   }
 
   body {
@@ -29,9 +26,6 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     font-size: 2rem;
-  }
-
-  a {
   }
 `
 
