@@ -7,6 +7,8 @@ export const Main = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--highlight);
+  color: var(--highlight);
 
   div {
     display: flex;
