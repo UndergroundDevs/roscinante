@@ -8,9 +8,6 @@ export const Main = styled.main`
   .know-our-project {
     width: 100%;
     min-height: 120vh;
-    background-image: url('./Shape-red.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
   }
 
   @media screen and (min-width: 1024px) and (max-width: 1439px) {
