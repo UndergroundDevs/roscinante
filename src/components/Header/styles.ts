@@ -10,8 +10,9 @@ export const HeaderStyle = styled.header`
   justify-content: space-between;
 
   a.home-link {
-    width: auto;
-    height: auto;
+    display: block;
+    min-width: 216px;
+    min-height: 89px;
   }
 
   ul {
@@ -93,5 +94,41 @@ export const HeaderStyle = styled.header`
 
   ul.sign-donate li a.blue {
     background-color: #164c97;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    padding: 0 25px;
+    height: 75px;
+
+    a.home-link {
+      min-height: 69px;
+      min-width: 150px;
+    }
+
+    ul.navigation {
+      height: 100%;
+      width: 100%;
+      padding: 0 0 0 6vw;
+      margin-left: 0;
+    }
+
+    ul.sign-donate li a {
+      width: 150px;
+      height: 40px;
+      font-size: 15px;
+    }
+
+    ul.sign-donate li + li {
+      margin-left: 15px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+  }
+
+  @media screen and (max-width: 767px) {
+  }
+
+  @media screen and (max-width: 424px) {
   }
 `

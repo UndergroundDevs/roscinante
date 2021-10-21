@@ -11,39 +11,49 @@ const Header: React.FC = () => {
             <Image
               src="/Logo.png"
               alt="Englosh 101 mentoria"
+              layout="responsive"
               width={216}
               height={89}
-              layout="fixed"
             />
           </a>
         </Link>
         <ul className="navigation">
           <li>
-            <a href="/project">Projeto</a>
+            <Link href="/project">
+              <a>Projeto</a>
+            </Link>
           </li>
           <li>
-            <a href="/members">Menbros</a>
+            <Link href="/members">
+              <a>Menbros</a>
+            </Link>
           </li>
           <li>
-            <a href="/blog">Blog</a>
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
           </li>
           <li>
-            <a href="/results">Resultados</a>
+            <Link href="/results">
+              <a>Resultados</a>
+            </Link>
           </li>
           <li>
-            <a href="/contact">Contato</a>
+            <Link href="/contact">
+              <a>Contato</a>
+            </Link>
           </li>
         </ul>
         <ul className="sign-donate">
           <li>
-            <a href="/donate" className="red">
-              Doe Agora
-            </a>
+            <Link href="/donate">
+              <a className="red">Doe Agora</a>
+            </Link>
           </li>
           <li>
-            <a href="/sign" className="blue">
-              Login
-            </a>
+            <Link href="/sign">
+              <a className="blue">Login</a>
+            </Link>
           </li>
         </ul>
       </HeaderStyle>
