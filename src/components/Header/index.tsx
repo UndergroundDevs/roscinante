@@ -1,11 +1,29 @@
+import { useEffect, useState } from 'react'
 import { HeaderStyle } from './styles'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const Header: React.FC = () => {
+  const [shadow, setShadow] = useState(false)
+
+  useEffect(() => {
+    console.log(shadow)
+    window.addEventListener('scroll', (event) => {
+      if (window.scrollY >= 200) {
+        console.log('maio que 100')
+        return setShadow(true)
+      }
+
+      if (window.scrollY <= 200) {
+        console.log('menor que 100')
+        return setShadow(false)
+      }
+    })
+  }, [])
+
   return (
     <>
-      <HeaderStyle>
+      <HeaderStyle shadow={shadow}>
         <Link href="/">
           <a className="home-link">
             <Image

@@ -1,13 +1,20 @@
 import styled from 'styled-components'
 
-export const HeaderStyle = styled.header`
+export const HeaderStyle = styled.header<{ shadow: boolean }>`
   height: 100px;
   width: 100%;
   padding: 0 100px;
+  position: fixed;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 20;
+  transition: all 1s;
+  box-shadow: ${({ shadow }) =>
+    shadow
+      ? 'rgba(39, 39, 39, .3) 0px 13px 27px -5px, rgba(39, 39, 39, .3) 0px 8px 16px -8px'
+      : 'none'};
 
   a.home-link {
     display: block;
