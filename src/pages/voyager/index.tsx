@@ -48,8 +48,79 @@ const Home: React.FC = () => {
               <p>Aplicação direta do inglês em sua vida academica.</p>
             </div>
           </Container>
+          <a href="">Faça sua inscrição</a>
         </section>
-        <section className="feedbacks"></section>
+        <section className="feedbacks">
+          <TitleSection>Feedbacks</TitleSection>
+          <p>
+            De uma olhada no feedback de alguns de nossos antigos mentorados!
+          </p>
+          <Container>
+            <div className="content">
+              <h2>
+                Product helps you see how many more days you need to work to
+                reach your financial goal.
+              </h2>
+              <div className="content-user">
+                <div className="container-img">
+                  <Image
+                    src="/Ellipse_2.png"
+                    alt="This is feedback"
+                    layout="responsive"
+                    width={50}
+                    height={50}
+                  />
+                </div>
+                <div className="content-data">
+                  <h3>Wahid Ari</h3>
+                  <p>Designer</p>
+                </div>
+              </div>
+            </div>
+            <div className="content">
+              <h2>
+                Product helps you see how many more days you need to work to
+                reach your financial goal.
+              </h2>
+              <div className="content-user">
+                <div className="container-img">
+                  <Image
+                    src="/Ellipse_2.png"
+                    alt="This is feedback"
+                    layout="responsive"
+                    width={50}
+                    height={50}
+                  />
+                </div>
+                <div className="content-data">
+                  <h3>Wahid Ari</h3>
+                  <p>Designer</p>
+                </div>
+              </div>
+            </div>
+            <div className="content">
+              <h2>
+                Product helps you see how many more days you need to work to
+                reach your financial goal.
+              </h2>
+              <div className="content-user">
+                <div className="container-img">
+                  <Image
+                    src="/Ellipse_2.png"
+                    alt="This is feedback"
+                    layout="responsive"
+                    width={50}
+                    height={50}
+                  />
+                </div>
+                <div className="content-data">
+                  <h3>Wahid Ari</h3>
+                  <p>Designer</p>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
         <section className="our-members"></section>
         <Footer />
       </Main>
