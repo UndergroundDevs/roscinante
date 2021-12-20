@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderStyle = styled.header<{ shadow: boolean }>`
-  height: 100px;
+  height: 75px;
   width: 100%;
   padding: 0 100px;
   position: fixed;
@@ -18,8 +18,8 @@ export const HeaderStyle = styled.header<{ shadow: boolean }>`
 
   a.home-link {
     display: block;
-    min-width: 216px;
-    min-height: 89px;
+    min-width: 160px;
+    min-height: 65px;
   }
 
   ul {
@@ -76,8 +76,8 @@ export const HeaderStyle = styled.header<{ shadow: boolean }>`
   }
 
   ul.sign-donate li a {
-    width: 168px;
-    height: 50px;
+    width: 158px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
