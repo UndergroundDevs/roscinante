@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import { Main } from 'styles/WorkingComponentStyle'
 import Image from 'next/image'
-import logo from 'assets/img/Logo.png'
-import logoUnderground from 'assets/img/underground-slogan.png'
+import logoEnglish from 'assets/img/Logo-Colorida-1.webp'
+import logo from 'assets/img/u.webp'
 
 export default function Home() {
   return (
@@ -14,8 +14,8 @@ export default function Home() {
       <Main>
         <div>
           <h1>we&apos;re working</h1>
-          <Image src={logoUnderground} alt="Underground Devs" />
           <Image src={logo} alt="English 101" />
+          <Image src={logoEnglish} alt="Underground Devs" />
         </div>
       </Main>
     </>

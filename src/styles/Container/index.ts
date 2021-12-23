@@ -1,19 +1,14 @@
 import styled from 'styled-components'
 
-export const Main = styled.main`
+export const Container = styled.section`
   width: 100%;
-  min-height: 1000vh;
   height: auto;
-
-  .know-our-project {
-    width: 100%;
-    min-height: 120vh;
-    background-image: url('./Shape-red.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
 
   @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    padding: 25px;
   }
 
   @media screen and (max-width: 1023px) {

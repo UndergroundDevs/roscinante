@@ -1,17 +1,25 @@
 import styled from 'styled-components'
 
-export const HeaderStyle = styled.header`
-  height: 100px;
+export const HeaderStyle = styled.header<{ shadow: boolean }>`
+  height: 75px;
   width: 100%;
   padding: 0 100px;
+  position: fixed;
   background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 20;
+  transition: all 1s;
+  box-shadow: ${({ shadow }) =>
+    shadow
+      ? 'rgba(39, 39, 39, .3) 0px 13px 27px -5px, rgba(39, 39, 39, .3) 0px 8px 16px -8px'
+      : 'none'};
 
   a.home-link {
-    width: auto;
-    height: auto;
+    display: block;
+    min-width: 160px;
+    min-height: 65px;
   }
 
   ul {
@@ -68,8 +76,8 @@ export const HeaderStyle = styled.header`
   }
 
   ul.sign-donate li a {
-    width: 168px;
-    height: 50px;
+    width: 158px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,5 +101,41 @@ export const HeaderStyle = styled.header`
 
   ul.sign-donate li a.blue {
     background-color: #164c97;
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    padding: 0 25px;
+    height: 75px;
+
+    a.home-link {
+      min-height: 69px;
+      min-width: 150px;
+    }
+
+    ul.navigation {
+      height: 100%;
+      width: 100%;
+      padding: 0 0 0 6vw;
+      margin-left: 0;
+    }
+
+    ul.sign-donate li a {
+      width: 150px;
+      height: 40px;
+      font-size: 15px;
+    }
+
+    ul.sign-donate li + li {
+      margin-left: 15px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+  }
+
+  @media screen and (max-width: 767px) {
+  }
+
+  @media screen and (max-width: 424px) {
   }
 `
