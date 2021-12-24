@@ -7,15 +7,12 @@ const Header: React.FC = () => {
   const [shadow, setShadow] = useState(false)
 
   useEffect(() => {
-    console.log(shadow)
     window.addEventListener('scroll', (event) => {
       if (window.scrollY >= 200) {
-        console.log('maio que 100')
         return setShadow(true)
       }
 
       if (window.scrollY <= 200) {
-        console.log('menor que 100')
         return setShadow(false)
       }
     })
@@ -27,7 +24,7 @@ const Header: React.FC = () => {
         <Link href="/">
           <a className="home-link">
             <Image
-              src="/Logo.png"
+              src="/Logo-Colorida-1.webp"
               alt="Englosh 101 mentoria"
               layout="responsive"
               width={216}

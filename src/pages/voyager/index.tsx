@@ -7,6 +7,10 @@ import { Container } from 'styles/Container'
 import { KnowProjects } from './styles/know-our-project'
 import { AboutProject } from './styles/about-project'
 import { Feedbacks } from './styles/feedbacks';
+import { OurMembers } from './styles/our-members';
+import { Links } from './styles/links';
+import { Contact } from './styles/contact'
+import { Partners } from './styles/partners'
 
 const Home: React.FC = () => {
   return (
@@ -142,13 +146,139 @@ const Home: React.FC = () => {
             </div>
           </Container>
         </Feedbacks>
-        <section className="our-members">
+        <OurMembers>
           <TitleSection>Nossos membros</TitleSection>
           <p>Conheça alguns de nossos membros</p>
-          <Container>
-            <div className="content-grid-menbers"></div>
-          </Container>
-        </section>
+          <div className="content-menbers">
+            <div className="content-profile-menbers">
+              <div className="photo">
+                <Image
+                  src="/Avator.webp"
+                  alt="english 101"
+                  width="110px"
+                  height="113px"
+                />
+              </div>
+              <h2 className="left-margin">I can take care of your pitch</h2>
+            </div>
+            <div className="content-profile-menbers rever-flex">
+              <div className="photo">
+                <Image
+                  src="/Avator.webp"
+                  alt="english 101"
+                  width="110px"
+                  height="113px"
+                />
+              </div>
+              <h2 className="right-margin">I can take care of your pitch</h2>
+            </div>
+            <div className="content-profile-menbers rever-flex">
+              <div className="photo">
+                <Image
+                  src="/Avator.webp"
+                  alt="english 101"
+                  width="110px"
+                  height="113px"
+                />
+              </div>
+              <h2 className="right-margin">I can take care of your pitch</h2>
+            </div>
+            <div className="content-profile-menbers">
+              <div className="photo">
+                <Image
+                  src="/Avator.webp"
+                  alt="english 101"
+                  width="110px"
+                  height="113px"
+                />
+              </div>
+              <h2 className="left-margin">I can take care of your pitch</h2>
+            </div>
+          </div>
+
+          <a href="http://google.com">Seja um mentor</a>
+        </OurMembers>
+        <div className="horizon" />
+        <Links>
+          <div className="content-box bg-color-blue">
+            <div className="text">
+              <h1>
+                Faça parte do nosso time
+              </h1>
+              <p>
+                Seja você também um mentor ENG.101 <br />
+                Inscreva-se aqui!
+              </p>
+              <a href="http://google.com">
+                Inscreva-se
+              </a>
+            </div>
+            <div className="logo">
+              <Image
+                src="/Logo-Simplifica-Branca.webp"
+                alt="english 101"
+                width="324px"
+                height="300x"
+              />
+            </div>
+          </div>
+          <div className="content-box bg-color-yellow">
+            <div className="text">
+              <h1>
+                Faça parte do nosso time
+              </h1>
+              <p>
+                Seja você também um mentor ENG.101 <br />
+                Inscreva-se aqui!
+              </p>
+              <a href="http://google.com">
+                Inscreva-se
+              </a>
+            </div>
+            <div className="logo">
+              <Image
+                src="/Logo-Simplifica-Branca.webp"
+                alt="english 101"
+                width="324px"
+                height="300x"
+              />
+            </div>
+          </div>
+        </Links>
+        <div className="horizon" />
+        <Contact>
+          <form>
+            <h1>Entre em contato</h1>
+            <input type="text" name="email" id="email" placeholder="Insira seu nome aqui!" />
+            <input type="email" name="email" id="email" placeholder="Insita seu email aqui!" />
+            <textarea name="message" id="message" placeholder="Insira sua mensagem aqui!" cols={30} rows={10} />
+            <button type="submit">
+              Enviar
+            </button>
+          </form>
+        </Contact>
+        <div className="horizon" />
+        <Partners>
+          <div className="help-project bg-red">
+            <h1>Ajude nosso projeto</h1>
+            <div className="content-pix">
+              <div className="photo">
+                <Image
+                  src="/Logo-Simplifica-Branca.webp"
+                  alt="english 101"
+                  width="149px"
+                  height="146px"
+                />
+              </div>
+              <p>Eng101@gmail.com</p>
+            </div>
+            <input type="text" id="pix" name="pix" defaultValue="Eng101@gmail.com" />
+          </div>
+          <div className="help-project bg-blue">
+            <h1>Nossos Parceiros</h1>
+
+          </div>
+        </Partners>
         <Footer />
       </Main>
     </>

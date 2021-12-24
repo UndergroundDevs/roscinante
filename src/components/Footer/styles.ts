@@ -148,7 +148,7 @@ export const FooterStyle = styled.footer`
     display: flex;
     width: 100%;
     height: 50%;
-    background-image: url(./Wave.png);
+    background-image: url(./Wave.webp);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100% 100%;
