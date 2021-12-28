@@ -14,5 +14,4 @@ export const Main = styled.main`
     margin: 20px 0;
     background: rgba(188, 208, 229, 1);
   }
-
 `

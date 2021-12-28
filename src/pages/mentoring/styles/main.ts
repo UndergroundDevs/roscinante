@@ -1,12 +1,24 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const Contact = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+export const Main = styled.main`
   width: 100%;
-  height: calc(100vh - 75px);
+  min-height: 100vh;
+  
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #E23933;
+
+  section {
+    padding: 75px 0 0 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   form {
     background: #FFFFFF;
@@ -16,9 +28,10 @@ export const Contact = styled.section`
     flex-direction: column;
     justify-content: space-between;
 
-    width: 700px;
+    width: 460px;
+    height: 530px;
     border-radius: 20px;
-    padding: 40px;
+    padding: 30px 30px;
   }
 
   form h1 {
@@ -27,6 +40,7 @@ export const Contact = styled.section`
     font-weight: bold;
     color: #22343D;
     text-align: center;
+    text-transform: uppercase;
     
     font-size: 26px;
     line-height: 30px;
@@ -37,7 +51,7 @@ export const Contact = styled.section`
     background: #F5F5F5;
     border: 1px solid #E8E8E8;
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 0 20px;
   }
 
@@ -55,14 +69,14 @@ export const Contact = styled.section`
   form input {
     width: 100%;
     height: 54px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   form textarea {
     width: 100%;
     height: 193px;
     padding-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   form button {
@@ -72,6 +86,7 @@ export const Contact = styled.section`
     font-style: normal;
     font-weight: bold;
     border: none;
+    cursor: pointer;
 
     font-size: 16px;
     line-height: 16px;
@@ -80,7 +95,7 @@ export const Contact = styled.section`
     height: 52px;
     left: 50px;
     top: 566px;
-    border-radius: 20px;
+    border-radius: 10px;
   }
 
   @media screen and (min-width: 1024px) and (max-width: 1439px) {

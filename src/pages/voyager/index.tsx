@@ -1,16 +1,23 @@
 import Image from 'next/image'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Pagination } from 'swiper';
 import { Main } from './styles/main'
 import { TitleSection } from 'styles/Title'
 import { Container } from 'styles/Container'
 import { KnowProjects } from './styles/know-our-project'
 import { AboutProject } from './styles/about-project'
-import { Feedbacks } from './styles/feedbacks';
+import { Feedbacks } from './styles/feedbacks'
 import { OurMembers } from './styles/our-members';
 import { Links } from './styles/links';
 import { Contact } from './styles/contact'
 import { Partners } from './styles/partners'
+
+import "swiper/css";
+import "swiper/css/pagination"
+
+SwiperCore.use([Pagination]);
 
 const Home: React.FC = () => {
   return (
@@ -195,7 +202,6 @@ const Home: React.FC = () => {
               <h2 className="left-margin">I can take care of your pitch</h2>
             </div>
           </div>
-
           <a href="http://google.com">Seja um mentor</a>
         </OurMembers>
         <div className="horizon" />
@@ -264,7 +270,7 @@ const Home: React.FC = () => {
             <div className="content-pix">
               <div className="photo">
                 <Image
-                  src="/Logo-Simplifica-Branca.webp"
+                  src="/pix.webp"
                   alt="english 101"
                   width="149px"
                   height="146px"
@@ -276,7 +282,218 @@ const Home: React.FC = () => {
           </div>
           <div className="help-project bg-blue">
             <h1>Nossos Parceiros</h1>
-
+            <Swiper pagination={true}>
+              <SwiperSlide>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground <br /> DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground <br /> DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground <br /> DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground <br /> DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground <br /> DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground <br /> DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground <br /> DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+                <div className="content">
+                  <div className="logo-partern">
+                    <Image
+                      src="/underground-slogan-1.webp"
+                      alt="english 101"
+                      width="100px"
+                      height="100px"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>Underground DEVS</h2>
+                    <p>Desenvolvimento inteligente</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </Partners>
         <Footer />
