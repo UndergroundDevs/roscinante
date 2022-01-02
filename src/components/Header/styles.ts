@@ -131,6 +131,40 @@ export const HeaderStyle = styled.header<{ shadow: boolean }>`
   }
 
   @media screen and (max-width: 1023px) {
+    width: 50%;
+    height: 100vh;
+    left: -50%;
+
+    flex-direction: column;
+    justify-content: inherit;
+
+    ul.navigation li + li, ul.navigation li {
+      margin: 0 0 0 20px;
+    }
+
+    ul.navigation {
+      flex-direction: column;
+      align-items: flex-start;
+
+      height: auto;
+      padding: 0 50px;
+      margin: 0;
+    }
+
+    
+    ul.sign-donate li + li {
+      margin: 20px 0 0 0;
+    }
+
+    ul.sign-donate {
+      padding: 0 50px;
+      margin: 20px 0 0 0;
+      width: 100%;
+      height: auto;
+
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   @media screen and (max-width: 767px) {
