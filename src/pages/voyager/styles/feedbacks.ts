@@ -4,6 +4,10 @@ export const Feedbacks = styled.section`
   width: 100%;
   height: calc(100vh - 100px);
   padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   p {
     font-family: 'Poppins' sans-serif;
@@ -17,6 +21,11 @@ export const Feedbacks = styled.section`
     color: #22343d;
   }
 
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .content-e101 {
     background: #ffffff;
     border: 1px solid #dedede;
@@ -24,9 +33,10 @@ export const Feedbacks = styled.section`
     border-radius: 5px;
     width: 31%;
     height: 278px;
+    max-width: 500px;
   }
 
-  .content-e101 h2 {
+  .content .content-e101 h2 {
     display: flex;
     align-items: center;
     height: 50%;
@@ -36,7 +46,7 @@ export const Feedbacks = styled.section`
     letter-spacing: 0.2px;
   }
 
-  .content-e101 .content-user {
+  .content .content-e101 .content-user {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -44,20 +54,20 @@ export const Feedbacks = styled.section`
     padding: 20px 40px;
   }
 
-  .content-e101 .content-user .container-img {
+  .content .content-e101 .content-user .container-img {
     display: block;
     width: 80px;
     height: 80px;
     margin-right: 20px;
   }
 
-  .content-e101 .content-user .content-data h3 {
+  .content .content-e101 .content-user .content-data h3 {
     margin-bottom: 16px;
     font-size: 16px;
     color: #164c97;
   }
 
-  .content-e101 .content-user .content-data p {
+  .content .content-e101 .content-user .content-data p {
     font-size: 13px;
   }
 
@@ -100,9 +110,31 @@ export const Feedbacks = styled.section`
     .content-e101 .content-user .content-data p {
       font-size: 13px;
     }
+    
+    .content .content-e101 h2 {
+      padding: 10px 10px;
+    }
+
+    .content .content-e101 .content-user {
+      padding: 10px 10px;
+    }
   }
 
   @media screen and (max-width: 1023px) {
+    height: auto;
+    padding: 50px;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content-e101 {
+      width: 400px;
+      margin: 0 0 30px 0;
+    }
   }
 
   @media screen and (max-width: 767px) {

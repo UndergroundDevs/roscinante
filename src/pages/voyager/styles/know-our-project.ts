@@ -11,12 +11,15 @@ export const KnowProjects = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  align-items: center;
 
   .content-info {
     display: flex;
+    max-width: 670px;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
+    justify-content: center;
+    margin-top: -280px;
   }
 
   .content-info h1 {
@@ -70,13 +73,18 @@ export const KnowProjects = styled.section`
 
     width: 600px;
     height: 573.94px;
+    margin-top: -280px;
+  }
+  
+  div.content-graph {
+    display: none;
   }
 
   @media screen and (min-width: 1024px) and (max-width: 1439px) {
     padding: 110px 50px 0 50px;
 
     .content-info {
-      margin-top: 60px;
+      margin-top: -280px;
     }
 
     .content-info p {
@@ -106,7 +114,6 @@ export const KnowProjects = styled.section`
       align-items: flex-start;
 
       padding: 0;
-      margin: 0;
     }
 
     .content-info h1 {

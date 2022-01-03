@@ -87,6 +87,18 @@ export const Contact = styled.section`
   }
 
   @media screen and (max-width: 1023px) {
+    form {
+      background: #FFFFFF;
+      border: 1px solid #DDDDDD;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      width: 500px;
+      border-radius: 20px;
+      padding: 40px;
+    }
   }
 
   @media screen and (max-width: 767px) {

@@ -166,6 +166,63 @@ export const FooterStyle = styled.footer`
   }
 
   @media screen and (max-width: 1023px) {
+    width: 100%;
+    min-height: calc(100vh - 75px);
+    flex-direction: column;
+
+    .container-footer {
+      display: grid;
+      justify-items: center;
+
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      width: 100%;
+      height: auto;
+      padding: 20px 50px;
+    }
+
+    .container-footer .content-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      width: 300px;
+      height: 100%;
+      padding: 0 50px;
+    }
+
+    .container-footer .news {
+      grid-column: 1/3;
+    }
+    
+    .container-footer ul.resources {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    .container-footer ul.resources li {
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      justify-self: center;
+      align-self: flex-end;
+    }
+
+    .container-footer ul.resources li:nth-child(1) {
+      grid-column: 1/3;
+    }
+
+    .container-footer ul.resources li:nth-child(1) > * {
+      text-align: center;
+    }
+
+    .container-footer ul.resources li:nth-child(1) li {
+      grid-column: 1/3;
+    }
+
+    .container-footer ul.resources li:nth-child(6) {
+      grid-column: 1/3;
+    }
   }
 
   @media screen and (max-width: 767px) {

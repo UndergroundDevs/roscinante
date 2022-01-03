@@ -44,7 +44,7 @@ export const AboutProject = styled.section`
     margin-top: 40px;
   }
 
-  .content-about > div + div{
+  .content-about > div + div {
     margin-left: 50px;
   }
 
@@ -129,6 +129,37 @@ export const AboutProject = styled.section`
   }
 
   @media screen and (max-width: 1023px) {
+    width: 100%;
+    height: auto;
+    padding: 50px 80px;
+    max-height: none;
+
+    .content-about {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .content-about > div + div {
+      margin: 50px 0 0 0;
+    }
+
+    div.content {
+      width: 100%;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    div.content h1 {
+      margin: 0;
+      width: 100%;
+    }
+
+    div.content p {
+      display: flex;
+      width: 100%;
+    }
   }
 
   @media screen and (max-width: 767px) {

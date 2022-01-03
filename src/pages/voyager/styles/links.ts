@@ -4,7 +4,7 @@ export const Links = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   width: 100%;
   height: calc(100vh - 75px);
@@ -15,9 +15,10 @@ export const Links = styled.section`
     justify-content: space-between;
     align-items: center;
 
+    margin-bottom: 20px;
     padding: 40px;
-    width: 869px;
-    height: 313px;
+    width: 709px;
+    height: 293px;
     border-radius: 20px;
   } 
   
@@ -35,7 +36,7 @@ export const Links = styled.section`
     color: #FFFFFF;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 36px;
+    font-size: 30px;
     line-height: 30px;
   }
 
@@ -46,7 +47,7 @@ export const Links = styled.section`
     color: #FFFFFF;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 32px;
+    font-size: 22px;
     line-height: 151.4%;
   }
 
@@ -71,8 +72,8 @@ export const Links = styled.section`
   .logo {
     display: block;
 
-    width: 324px;
-    height: 300px;
+    width: 270px;
+    height: 250px;
   }
 
   .bg-color-blue {
@@ -119,6 +120,26 @@ export const Links = styled.section`
   }
 
   @media screen and (max-width: 1023px) {
+    .content-box {
+      padding: 40px;
+      width: 560px;
+      height: 253px;
+    }
+    
+    .text h1 {
+      font-size: 20px;
+    }
+
+    .text p {
+      font-size: 14px;
+    }
+
+    .logo {
+      display: block;
+
+      width: 220px;
+      height: 203px;
+    }
   }
 
   @media screen and (max-width: 767px) {
