@@ -1,8 +1,9 @@
 import React from 'react';
-import Header from '../../components/Header'
-import { Main } from './styles/main'
+import Header from 'components/Header'
+import type { NextPage } from 'next'
+import { Main } from 'assets/styles/mentored/main'
 
-const Mentored: React.FC = () => {
+const Mentored: NextPage = () => {
   return (
     <Main>
       <Header />

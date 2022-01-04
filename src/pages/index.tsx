@@ -1,10 +1,9 @@
-import Head from 'next/head'
 import { Main } from 'styles/WorkingComponentStyle'
+import type { NextPage } from 'next'
+import Head from 'next/head'
 import Image from 'next/image'
-import logoEnglish from 'assets/img/Logo-Colorida-1.webp'
-import logo from 'assets/img/u.webp'
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
@@ -14,10 +13,26 @@ export default function Home() {
       <Main>
         <div>
           <h1>we&apos;re working</h1>
-          <Image src={logo} alt="English 101" />
-          <Image src={logoEnglish} alt="Underground Devs" />
+          <div className="photo">
+            <Image
+              src="/Logo-Colorida-1.webp"
+              alt="English 101"
+              width={216}
+              height={89}
+            />
+          </div>
+          <div className="photo">
+            <Image
+              src="/u.webp"
+              alt="Underground Devs"
+              width={848}
+              height={1098}
+            />
+          </div>
         </div>
       </Main>
     </>
   )
 }
+
+export default Home;

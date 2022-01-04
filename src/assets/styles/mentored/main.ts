@@ -20,7 +20,6 @@ export const Main = styled.main`
     align-items: center;
   }
 
-  
   form {
     background: #FFFFFF;
     border: 1px solid #DDDDDD;

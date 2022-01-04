@@ -1,25 +1,25 @@
 import Image from 'next/image'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
+import SwiperCore, { Pagination } from 'swiper'
+import type { NextPage } from 'next'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Pagination } from 'swiper';
-import { Main } from './styles/main'
+import { Main } from 'assets/styles/home/main'
 import { TitleSection } from 'styles/Title'
-import { Container } from 'styles/Container'
-import { KnowProjects } from './styles/know-our-project'
-import { AboutProject } from './styles/about-project'
-import { Feedbacks } from './styles/feedbacks'
-import { OurMembers } from './styles/our-members';
-import { Links } from './styles/links';
-import { Contact } from './styles/contact'
-import { Partners } from './styles/partners'
+import { KnowProjects } from 'assets/styles/home/know-our-project'
+import { AboutProject } from 'assets/styles/home/about-project'
+import { Feedbacks } from 'assets/styles/home/feedbacks'
+import { OurMembers } from 'assets/styles/home/our-members'
+import { Links } from 'assets/styles/home/links'
+import { Contact } from 'assets/styles/home/contact'
+import { Partners } from 'assets/styles/home/partners'
 
 import "swiper/css";
 import "swiper/css/pagination"
 
 SwiperCore.use([Pagination]);
 
-const Home: React.FC = () => {
+const Home: NextPage = () => {
   return (
     <>
       <Main>
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
                   </span>
                   <p className="paragraph-count">103</p>
                   <div className="country">
-                    <svg width={107} height={52} viewBox="0 0 107 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width={107} height={52} viewBox="0 0 107 52" fill="none">
                       <path d="M21.1272 31.7858H21.1311H90.163C94.2491 31.7858 98.1567 30.2243 101.029 27.4625C103.899 24.7025 105.5 20.9721 105.5 17.0953C105.5 13.2185 103.899 9.48803 101.029 6.7281C98.1567 3.96624 94.2491 2.4048 90.163 2.4048L11.5845 2.4048L11.5823 2.4048C10.2874 2.40294 9.00618 2.64689 7.81248 3.12134C6.61885 3.59577 5.53806 4.29058 4.63058 5.16319C3.72325 6.03569 3.00716 7.06858 2.52038 8.20105C2.03365 9.33336 1.78493 10.5447 1.78683 11.7663V11.7686V48.3005L17.4311 33.2569L17.4393 33.2492C18.4321 32.3086 19.7571 31.7893 21.1272 31.7858Z" fill="#E23933" stroke="white" strokeWidth={3} />
                     </svg>
                     <p>Brasil</p>
@@ -56,7 +56,7 @@ const Home: React.FC = () => {
                   </span>
                   <p className="paragraph-count">103</p>
                   <div className="country">
-                    <svg width={107} height={52} viewBox="0 0 107 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width={107} height={52} viewBox="0 0 107 52" fill="none">
                       <path d="M21.1272 31.7858H21.1311H90.163C94.2491 31.7858 98.1567 30.2243 101.029 27.4625C103.899 24.7025 105.5 20.9721 105.5 17.0953C105.5 13.2185 103.899 9.48803 101.029 6.7281C98.1567 3.96624 94.2491 2.4048 90.163 2.4048L11.5845 2.4048L11.5823 2.4048C10.2874 2.40294 9.00618 2.64689 7.81248 3.12134C6.61885 3.59577 5.53806 4.29058 4.63058 5.16319C3.72325 6.03569 3.00716 7.06858 2.52038 8.20105C2.03365 9.33336 1.78493 10.5447 1.78683 11.7663V11.7686V48.3005L17.4311 33.2569L17.4393 33.2492C18.4321 32.3086 19.7571 31.7893 21.1272 31.7858Z" fill="#164C97" stroke="white" strokeWidth={3} />
                     </svg>
                     <p>Alemanha</p>
@@ -72,7 +72,7 @@ const Home: React.FC = () => {
                   </span>
                   <p className="paragraph-count">103</p>
                   <div className="country">
-                    <svg width={107} height={52} viewBox="0 0 107 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width={107} height={52} viewBox="0 0 107 52" fill="none">
                       <path d="M21.1272 31.7858H21.1311H90.163C94.2491 31.7858 98.1567 30.2243 101.029 27.4625C103.899 24.7025 105.5 20.9721 105.5 17.0953C105.5 13.2185 103.899 9.48803 101.029 6.7281C98.1567 3.96624 94.2491 2.4048 90.163 2.4048L11.5845 2.4048L11.5823 2.4048C10.2874 2.40294 9.00618 2.64689 7.81248 3.12134C6.61885 3.59577 5.53806 4.29058 4.63058 5.16319C3.72325 6.03569 3.00716 7.06858 2.52038 8.20105C2.03365 9.33336 1.78493 10.5447 1.78683 11.7663V11.7686V48.3005L17.4311 33.2569L17.4393 33.2492C18.4321 32.3086 19.7571 31.7893 21.1272 31.7858Z" fill="#FFCF2D" stroke="white" strokeWidth={3} />
                     </svg>
                     <p>China</p>
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
                   </span>
                   <p className="paragraph-count">103</p>
                   <div className="country">
-                    <svg width={107} height={52} viewBox="0 0 107 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width={107} height={52} viewBox="0 0 107 52" fill="none">
                       <path d="M21.1272 31.7858H21.1311H90.163C94.2491 31.7858 98.1567 30.2243 101.029 27.4625C103.899 24.7025 105.5 20.9721 105.5 17.0953C105.5 13.2185 103.899 9.48803 101.029 6.7281C98.1567 3.96624 94.2491 2.4048 90.163 2.4048L11.5845 2.4048L11.5823 2.4048C10.2874 2.40294 9.00618 2.64689 7.81248 3.12134C6.61885 3.59577 5.53806 4.29058 4.63058 5.16319C3.72325 6.03569 3.00716 7.06858 2.52038 8.20105C2.03365 9.33336 1.78493 10.5447 1.78683 11.7663V11.7686V48.3005L17.4311 33.2569L17.4393 33.2492C18.4321 32.3086 19.7571 31.7893 21.1272 31.7858Z" fill="#22343D" stroke="white" strokeWidth={3} />
                     </svg>
                     <p>Rússia</p>
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
                   </span>
                   <p className="paragraph-count">103</p>
                   <div className="country">
-                    <svg width={107} height={52} viewBox="0 0 107 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width={107} height={52} viewBox="0 0 107 52" fill="none">
                       <path d="M21.1272 31.7858H21.1311H90.163C94.2491 31.7858 98.1567 30.2243 101.029 27.4625C103.899 24.7025 105.5 20.9721 105.5 17.0953C105.5 13.2185 103.899 9.48803 101.029 6.7281C98.1567 3.96624 94.2491 2.4048 90.163 2.4048L11.5845 2.4048L11.5823 2.4048C10.2874 2.40294 9.00618 2.64689 7.81248 3.12134C6.61885 3.59577 5.53806 4.29058 4.63058 5.16319C3.72325 6.03569 3.00716 7.06858 2.52038 8.20105C2.03365 9.33336 1.78493 10.5447 1.78683 11.7663V11.7686V48.3005L17.4311 33.2569L17.4393 33.2492C18.4321 32.3086 19.7571 31.7893 21.1272 31.7858Z" fill="#A5B4B4" stroke="white" strokeWidth={3} />
                     </svg>
                     <p>Espanha</p>
