@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeaderStyle = styled.header<{ shadow: boolean }>`
+export const HeaderStyle = styled.header<{ shadow: boolean, isOpen: boolean }>`
   height: 75px;
   width: 100%;
   padding: 0 100px;
@@ -133,13 +133,17 @@ export const HeaderStyle = styled.header<{ shadow: boolean }>`
   @media screen and (max-width: 1023px) {
     width: 50%;
     height: 100vh;
-    left: -50%;
-
+    padding: 0 0 0 0px;
+    left: ${({ isOpen }) =>
+    isOpen
+      ? '0%'
+      : '-50%'};;
+    transition: all .5s;
     flex-direction: column;
     justify-content: inherit;
 
     ul.navigation li + li, ul.navigation li {
-      margin: 0 0 0 20px;
+      margin: 0 0 30px 20px;
     }
 
     ul.navigation {
@@ -151,7 +155,6 @@ export const HeaderStyle = styled.header<{ shadow: boolean }>`
       margin: 0;
     }
 
-    
     ul.sign-donate li + li {
       margin: 20px 0 0 0;
     }
@@ -165,6 +168,92 @@ export const HeaderStyle = styled.header<{ shadow: boolean }>`
       flex-direction: column;
       align-items: flex-start;
     }
+
+    ul.navigation {
+      flex-direction: column;
+      align-items: flex-start;
+
+      height: auto;
+      padding: 50px 50px;
+      margin: 0;
+    }
+
+    ul.navigation li a {
+      font-size: 22px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+  }
+
+  @media screen and (max-width: 424px) {
+  }
+`
+
+export const HeaderMobile = styled.header`
+  display: none;
+
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+  }
+
+  @media screen and (max-width: 1023px) {
+    height: 75px;
+    width: 100%;
+    padding: 0 30px;
+    transition: all 1s;
+
+    position: fixed;
+    background-color: #ffffff;
+    display: flex;
+    z-index: 20;
+    justify-content: space-between;
+    align-items: center;
+
+    a.home-link {
+      display: block;
+      min-width: 160px;
+      min-height: 65px;
+    }
+
+    span {
+      width: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    span > div {
+      width: 30px;
+      height: 3px;
+      border-radius: 20px;
+      
+      background-color: #164C97;
+      position: relative;
+    }
+
+    span > div::after {
+      position: absolute;
+      background-color: #164C97;
+      content: ' ';
+
+      border-radius: 20px;
+      width: 30px;
+      height: 3px;
+      top: -10px;
+    }
+
+    span > div::before {
+      position: absolute;
+      background-color: #164C97;
+      content: ' ';
+
+      border-radius: 20px;
+      width: 30px;
+      top: 10px;
+      height: 3px;
+    }
+
   }
 
   @media screen and (max-width: 767px) {

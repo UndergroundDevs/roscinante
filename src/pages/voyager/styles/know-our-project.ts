@@ -107,13 +107,14 @@ export const KnowProjects = styled.section`
   @media screen and (max-width: 1023px) {
     display: flex;
     padding: 75px 100px 100px;
-    
+
     .content-info {
       width: 100%;
+      padding: 0;
+      margin: -100px 0 0 0;
+
       justify-content: center;
       align-items: flex-start;
-
-      padding: 0;
     }
 
     .content-info h1 {

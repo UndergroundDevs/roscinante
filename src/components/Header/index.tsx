@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react'
-import { HeaderStyle } from './styles'
+import { useEffect, useState, MouseEvent } from 'react'
+import { HeaderMobile, HeaderStyle } from './styles'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const Header: React.FC = () => {
-  const [shadow, setShadow] = useState(false)
+  const [shadow, setShadow] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener('scroll', (event) => {
@@ -18,9 +19,13 @@ const Header: React.FC = () => {
     })
   }, [])
 
+  function isOpenMenu(event: MouseEvent<HTMLSpanElement>) {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <>
-      <HeaderStyle shadow={shadow}>
+      <HeaderStyle shadow={shadow} isOpen={isOpen}>
         <Link href="/">
           <a className="home-link">
             <Image
@@ -72,6 +77,22 @@ const Header: React.FC = () => {
           </li>
         </ul>
       </HeaderStyle>
+      <HeaderMobile>
+        <Link href="/">
+          <a className="home-link">
+            <Image
+              src="/Logo-Colorida-1.webp"
+              alt="Englosh 101 mentoria"
+              layout="responsive"
+              width={216}
+              height={89}
+            />
+          </a>
+        </Link>
+        <span onClick={isOpenMenu}>
+          <div />
+        </span>
+      </HeaderMobile>
     </>
   )
 }
