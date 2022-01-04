@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build": "next build && next export",
+    "deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
     "@styled-icons/entypo-social": "^10.34.0",
