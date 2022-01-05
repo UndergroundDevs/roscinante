@@ -17,9 +17,9 @@ export const HeaderStyle = styled.header<{ shadow: boolean, isOpen: boolean }>`
       : 'none'};
 
   a.home-link {
-    display: block;
-    min-width: 160px;
-    min-height: 65px;
+    display: flex;
+    width: 157px;
+    height: 65px;
   }
 
   ul {

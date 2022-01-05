@@ -69,7 +69,7 @@ export const KnowProjects = styled.section`
   }
 
   .picture {
-    display: block;
+    display: flex;
 
     width: 600px;
     height: 573.94px;
@@ -97,7 +97,7 @@ export const KnowProjects = styled.section`
     }
 
     .picture {
-      display: block;
+      display: flex;
 
       width: 500px;
       height: 478.28px;

@@ -70,7 +70,7 @@ export const Links = styled.section`
   }
 
   .logo {
-    display: block;
+    display: flex;
 
     width: 270px;
     height: 250px;
@@ -104,7 +104,7 @@ export const Links = styled.section`
     }
 
     .logo {
-      display: block;
+      display: flex;
 
       width: 250px;
       height: 231px;
@@ -135,7 +135,7 @@ export const Links = styled.section`
     }
 
     .logo {
-      display: block;
+      display: flex;
 
       width: 220px;
       height: 203px;

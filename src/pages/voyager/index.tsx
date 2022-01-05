@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
 import SwiperCore, { Pagination } from 'swiper'
@@ -119,11 +118,9 @@ const Home: NextPage = () => {
             <a href="http://google.com">Vamos começar</a>
           </div>
           <div className="picture">
-            <Image
+            <img
               src="/girl-img-header.webp"
               alt="english 101"
-              width="714px"
-              height="683px"
             />
           </div>
         </KnowProjects>
@@ -179,12 +176,9 @@ const Home: NextPage = () => {
               </h2>
               <div className="content-user">
                 <div className="container-img">
-                  <Image
+                  <img
                     src="/Ellipse-2.webp"
                     alt="This is feedback"
-                    layout="responsive"
-                    width={50}
-                    height={50}
                   />
                 </div>
                 <div className="content-data">
@@ -200,12 +194,9 @@ const Home: NextPage = () => {
               </h2>
               <div className="content-user">
                 <div className="container-img">
-                  <Image
+                  <img
                     src="/Ellipse-2.webp"
                     alt="This is feedback"
-                    layout="responsive"
-                    width={50}
-                    height={50}
                   />
                 </div>
                 <div className="content-data">
@@ -221,12 +212,9 @@ const Home: NextPage = () => {
               </h2>
               <div className="content-user">
                 <div className="container-img">
-                  <Image
+                  <img
                     src="/Ellipse-2.webp"
                     alt="This is feedback"
-                    layout="responsive"
-                    width={50}
-                    height={50}
                   />
                 </div>
                 <div className="content-data">
@@ -243,44 +231,36 @@ const Home: NextPage = () => {
           <div className="content-menbers">
             <div className="content-profile-menbers">
               <div className="photo">
-                <Image
+                <img
                   src="/Avator.webp"
                   alt="english 101"
-                  width="110px"
-                  height="113px"
                 />
               </div>
               <h2 className="left-margin">I can take care of your pitch</h2>
             </div>
             <div className="content-profile-menbers rever-flex">
               <div className="photo">
-                <Image
+                <img
                   src="/Avator.webp"
                   alt="english 101"
-                  width="110px"
-                  height="113px"
                 />
               </div>
               <h2 className="right-margin">I can take care of your pitch</h2>
             </div>
             <div className="content-profile-menbers rever-flex">
               <div className="photo">
-                <Image
+                <img
                   src="/Avator.webp"
                   alt="english 101"
-                  width="110px"
-                  height="113px"
                 />
               </div>
               <h2 className="right-margin">I can take care of your pitch</h2>
             </div>
             <div className="content-profile-menbers">
               <div className="photo">
-                <Image
+                <img
                   src="/Avator.webp"
                   alt="english 101"
-                  width="110px"
-                  height="113px"
                 />
               </div>
               <h2 className="left-margin">I can take care of your pitch</h2>
@@ -304,11 +284,9 @@ const Home: NextPage = () => {
               </a>
             </div>
             <div className="logo">
-              <Image
+              <img
                 src="/Logo-Simplifica-Branca.webp"
                 alt="english 101"
-                width="324px"
-                height="300x"
               />
             </div>
           </div>
@@ -326,11 +304,9 @@ const Home: NextPage = () => {
               </a>
             </div>
             <div className="logo">
-              <Image
+              <img
                 src="/Logo-Simplifica-Branca.webp"
                 alt="english 101"
-                width="324px"
-                height="300x"
               />
             </div>
           </div>
@@ -353,11 +329,9 @@ const Home: NextPage = () => {
             <h1>Ajude nosso projeto</h1>
             <div className="content-pix">
               <div className="photo">
-                <Image
+                <img
                   src="/pix.webp"
                   alt="english 101"
-                  width="149px"
-                  height="146px"
                 />
               </div>
               <p>Eng101@gmail.com</p>
@@ -370,11 +344,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -384,11 +356,9 @@ const Home: NextPage = () => {
                 </div>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -400,11 +370,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -414,11 +382,9 @@ const Home: NextPage = () => {
                 </div>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -430,11 +396,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -444,11 +408,9 @@ const Home: NextPage = () => {
                 </div>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -460,11 +422,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -474,11 +434,9 @@ const Home: NextPage = () => {
                 </div>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -490,11 +448,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -504,11 +460,9 @@ const Home: NextPage = () => {
                 </div>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -520,11 +474,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -534,11 +486,9 @@ const Home: NextPage = () => {
                 </div>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -550,11 +500,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -564,11 +512,9 @@ const Home: NextPage = () => {
                 </div>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -582,11 +528,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -598,11 +542,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -614,11 +556,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -630,11 +570,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -646,11 +584,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -662,11 +598,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -678,11 +612,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">
@@ -694,11 +626,9 @@ const Home: NextPage = () => {
               <SwiperSlide>
                 <div className="content">
                   <div className="logo-partern">
-                    <Image
+                    <img
                       src="/underground-slogan-1.webp"
                       alt="english 101"
-                      width="100px"
-                      height="100px"
                     />
                   </div>
                   <div className="info">

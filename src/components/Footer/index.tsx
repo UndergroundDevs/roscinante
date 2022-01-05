@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FacebookWithCircle, InstagramWithCircle, TwitterWithCircle } from '@styled-icons/entypo-social'
 import { FooterStyle } from './styles'
 
@@ -8,11 +7,9 @@ const Footer: React.FC = () => {
       <section className="container-footer">
         <div className="content-logo">
           <a href="" className="logo">
-            <Image
+            <img
               src="/logo-simple-color.webp"
               alt="english 101"
-              width="153px"
-              height="139px"
             />
           </a>
           <ul>

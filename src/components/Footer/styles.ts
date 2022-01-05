@@ -27,7 +27,13 @@ export const FooterStyle = styled.footer`
   }
 
   .container-footer .content-logo a.logo {
-    display: block;
+    display: flex;
+    width: 153px;
+    height: 139px;
+  }
+
+  .container-footer .content-logo a.logo img {
+    display: flex;
     width: 153px;
     height: 139px;
   }

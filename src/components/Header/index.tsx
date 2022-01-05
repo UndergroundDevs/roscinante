@@ -1,6 +1,5 @@
 import { useEffect, useState, MouseEvent } from 'react'
 import { HeaderMobile, HeaderStyle } from './styles'
-import Image from 'next/image'
 import Link from 'next/link'
 
 const Header: React.FC = () => {
@@ -28,12 +27,9 @@ const Header: React.FC = () => {
       <HeaderStyle shadow={shadow} isOpen={isOpen}>
         <Link href="/">
           <a className="home-link">
-            <Image
+            <img
               src="/Logo-Colorida-1.webp"
               alt="Englosh 101 mentoria"
-              layout="responsive"
-              width={216}
-              height={89}
             />
           </a>
         </Link>
@@ -80,12 +76,9 @@ const Header: React.FC = () => {
       <HeaderMobile>
         <Link href="/">
           <a className="home-link">
-            <Image
+            <img
               src="/Logo-Colorida-1.webp"
               alt="Englosh 101 mentoria"
-              layout="responsive"
-              width={216}
-              height={89}
             />
           </a>
         </Link>

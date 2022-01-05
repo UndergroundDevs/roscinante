@@ -1,7 +1,6 @@
 import { Main } from 'styles/WorkingComponentStyle'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
@@ -14,19 +13,15 @@ const Home: NextPage = () => {
         <div>
           <h1>we&apos;re working</h1>
           <div className="photo">
-            <Image
+            <img
               src="/Logo-Colorida-1.webp"
               alt="English 101"
-              width={216}
-              height={89}
             />
           </div>
           <div className="photo">
-            <Image
+            <img
               src="/u.webp"
               alt="Underground Devs"
-              width={848}
-              height={1098}
             />
           </div>
         </div>
