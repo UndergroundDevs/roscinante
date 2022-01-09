@@ -366,5 +366,20 @@ export const KnowProjects = styled.section`
   }
 
   @media screen and (max-width: 424px) {
+    div.content-graph {
+      transform: scale(0.99);
+    }
+
+    .content-info a {
+      width: 220px;
+      height: 40px;
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 374px) {
+    div.content-graph {
+      transform: scale(0.8);
+    }
   }
 `

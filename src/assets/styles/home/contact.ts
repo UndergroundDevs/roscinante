@@ -130,6 +130,9 @@ export const Contact = styled.section`
   }
 
   @media screen and (max-width: 424px) {
+    form {
+      padding: 20px;
+    }
   }
 
   @media screen and (max-width: 374px) {

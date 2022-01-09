@@ -146,6 +146,18 @@ export const OurMembers = styled.section`
   }
 
   @media screen and (max-width: 424px) {
+    .content-profile-menbers {
+      height: 100px;
+      align-items: center;
+    }
+
+    .content-profile-menbers .photo {
+      height: 90px;
+    }
+
+    .content-profile-menbers .photo img {
+      height: 90px;
+    }
   }
 
   @media screen and (max-width: 374px) {

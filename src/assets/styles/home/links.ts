@@ -143,6 +143,7 @@ export const Links = styled.section`
   }
 
   @media screen and (max-width: 767px) {
+    height: auto;
     .content-box {
       padding: 25px 15px;
       width: 100%;
@@ -156,6 +157,14 @@ export const Links = styled.section`
   }
 
   @media screen and (max-width: 424px) {
+    .content-box {
+      height: 280px;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   @media screen and (max-width: 374px) {

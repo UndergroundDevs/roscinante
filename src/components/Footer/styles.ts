@@ -139,13 +139,10 @@ export const FooterStyle = styled.footer`
     box-sizing: border-box;
     border: none;
     background: #E23933;
-
     font-family: Barlow Condensed;
     font-style: normal;
     font-weight: bold;
-
     text-align: center;
-
     color: #FFFFFF;
   }
   
@@ -231,18 +228,89 @@ export const FooterStyle = styled.footer`
   }
 
   @media screen and (max-width: 767px) {
+    .container-footer {
+      display: grid;
+      justify-items: center;
+
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
     .container-footer .content-logo {
-      width: 100px;
+      width: 200px;
       height: 100%;
-      padding: 0 0px;
+      padding: 0 20px;
+    }
+
+    .container-footer .content-logo a.logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    .container-footer .content-logo a.logo img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .container-footer .news {
+      grid-column: 1/3;
+    }
+    
+    .container-footer ul.resources {
+      width: 150px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .container-footer ul.resources li {
+      width: 100%;
     }
 
     .container-footer .news form {
       display: flex;
       flex-direction: column;
     }
+    
+    .container-footer .news h1 {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    .container-footer .news form button {
+      margin: 20px 0 0 0;
+      font-size: 16px;
+    }
   }
 
   @media screen and (max-width: 424px) {
+    .container-footer {
+      display: grid;
+      justify-items: center;
+
+      grid-template-columns: 1fr 1fr;
+      gap: 0px;
+      padding: 20px;
+    }
+
+    .container-footer .content-logo {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+    }
+
+    .container-footer .news {
+      padding: 20px 0;
+      grid-column: 1/3;
+      width: 100%;
+    }
+
+    .container-footer .news form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .container-footer .news form input {
+      width: 100%;
+    }
   }
 `

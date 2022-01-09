@@ -184,6 +184,16 @@ export const HeaderStyle = styled.header<{ shadow: boolean, isOpen: boolean }>`
   }
 
   @media screen and (max-width: 767px) {
+    width: 70%;
+    height: 100vh;
+    padding: 0 0 0 0px;
+    left: ${({ isOpen }) =>
+    isOpen
+      ? '0%'
+      : '-70%'};;
+    transition: all .5s;
+    flex-direction: column;
+    justify-content: inherit;
   }
 
   @media screen and (max-width: 424px) {
@@ -211,9 +221,15 @@ export const HeaderMobile = styled.header`
     align-items: center;
 
     a.home-link {
-      display: block;
-      min-width: 160px;
-      min-height: 65px;
+      display: flex;
+      width: 145px;
+      height: 60px;
+    }
+
+    a.home-link img {
+      display: flex;
+      width: 145px;
+      height: 60px;
     }
 
     span {

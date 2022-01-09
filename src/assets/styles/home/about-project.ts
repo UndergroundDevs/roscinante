@@ -99,23 +99,12 @@ export const AboutProject = styled.section`
 
 
   @media screen and (min-width: 1024px) and (max-width: 1439px) {
-    padding: 100px 0 0 0;
+    padding: 20px 0 0 0;
 
     a {
       margin: 0;
     }
-
-    div.content {
-      width: 20%;
-      height: 380px;
-      display: flex;
-      flex-direction: column;
-    }
-
-    div.content h1 {
-      margin: 20px 0 15px 0;
-    }
-
+    
     .content-about {
       margin-top: 20px;
       padding: 0 25px;
@@ -125,6 +114,18 @@ export const AboutProject = styled.section`
 
     .content-about > div + div{
       margin-left: 0;
+    }
+
+    div.content {
+      width: 20%;
+      height: 380px;
+      max-height: 400px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    div.content h1 {
+      margin: 20px 0 15px 0;
     }
   }
 
@@ -168,6 +169,9 @@ export const AboutProject = styled.section`
   }
 
   @media screen and (max-width: 424px) {
+    h1 {
+      font-size: 28px;
+    }
   }
 
   @media screen and (max-width: 374px) {

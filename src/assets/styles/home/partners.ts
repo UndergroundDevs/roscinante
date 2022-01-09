@@ -227,5 +227,43 @@ export const Partners = styled.section`
 }
 
 @media screen and (max-width: 374px) {
+  flex-direction: column;
+  height: auto;
+
+  .help-project {
+    width: 100%;
+  }
+
+  .help-project:nth-child(1) .content-pix .photo {
+    display: flex;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .help-project:nth-child(2) {
+    width: 100%;
+    padding: 20px;
+    height: 300px;
+  }
+
+  .help-project h1 {
+    font-size: 20px;
+  }
+
+  .content .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .content .info h2 {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .content .info p {
+    font-size: 13px;
+    line-height: 20px;
+  }
 }
 `
