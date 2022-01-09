@@ -125,6 +125,24 @@ export const OurMembers = styled.section`
   }
 
   @media screen and (max-width: 767px) {
+    margin: 0;
+    padding: 40px 20px 0 20px;
+
+    .content-profile-menbers:nth-child(4) h2 {
+      margin: 0 20px 0 0;
+    }
+
+    .content-profile-menbers:nth-child(3) h2 {
+      margin: 0 0 0 20px;
+    }
+
+    .left-margin {
+      margin-left: 20px;
+    }
+
+    .right-margin {
+      margin-right: 20px;
+    }
   }
 
   @media screen and (max-width: 424px) {

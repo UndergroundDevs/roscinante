@@ -129,7 +129,6 @@ export const FooterStyle = styled.footer`
     line-height: 28px;
   }
 
-
   .container-footer .news form button {
     width: 117px;
     height: 40px;
@@ -232,6 +231,16 @@ export const FooterStyle = styled.footer`
   }
 
   @media screen and (max-width: 767px) {
+    .container-footer .content-logo {
+      width: 100px;
+      height: 100%;
+      padding: 0 0px;
+    }
+
+    .container-footer .news form {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   @media screen and (max-width: 424px) {

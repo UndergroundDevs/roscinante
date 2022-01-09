@@ -87,6 +87,34 @@ export const Contact = styled.section`
   }
 
   @media screen and (max-width: 1023px) {
+    padding: 20px;
+
+    form {
+      border-radius: 10px;
+      padding: 20px 30px;
+      width: 400px;
+      height: 450px;
+    }
+
+    
+    form input, form textarea {
+      border-radius: 10px;
+    }
+
+    form input {
+      margin-bottom: 20px;
+    }
+
+    form textarea {
+      margin-bottom: 20px;
+    }
+
+    form button {
+      border-radius: 10px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
     form {
       background: #FFFFFF;
       border: 1px solid #DDDDDD;
@@ -95,13 +123,10 @@ export const Contact = styled.section`
       flex-direction: column;
       justify-content: space-between;
 
-      width: 500px;
+      max-width: 500px;
       border-radius: 20px;
       padding: 40px;
     }
-  }
-
-  @media screen and (max-width: 767px) {
   }
 
   @media screen and (max-width: 424px) {

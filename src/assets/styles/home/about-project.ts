@@ -138,6 +138,7 @@ export const AboutProject = styled.section`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      max-width: 400px;
     }
 
     .content-about > div + div {
@@ -163,6 +164,7 @@ export const AboutProject = styled.section`
   }
 
   @media screen and (max-width: 767px) {
+    padding: 50px 20px;
   }
 
   @media screen and (max-width: 424px) {

@@ -143,7 +143,7 @@ export const HeaderStyle = styled.header<{ shadow: boolean, isOpen: boolean }>`
     justify-content: inherit;
 
     ul.navigation li + li, ul.navigation li {
-      margin: 0 0 30px 20px;
+      margin: 0 0 20px 20px;
     }
 
     ul.navigation {
@@ -204,6 +204,7 @@ export const HeaderMobile = styled.header`
 
     position: fixed;
     background-color: #ffffff;
+    border-bottom: 1px solid #dedede;
     display: flex;
     z-index: 20;
     justify-content: space-between;
@@ -253,7 +254,6 @@ export const HeaderMobile = styled.header`
       top: 10px;
       height: 3px;
     }
-
   }
 
   @media screen and (max-width: 767px) {

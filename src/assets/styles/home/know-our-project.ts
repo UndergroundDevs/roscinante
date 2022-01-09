@@ -362,6 +362,7 @@ export const KnowProjects = styled.section`
   }
 
   @media screen and (max-width: 767px) {
+    padding: 0 20px;
   }
 
   @media screen and (max-width: 424px) {

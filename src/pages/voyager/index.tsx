@@ -1,5 +1,6 @@
 import Footer from 'components/Footer'
 import Header from 'components/Header'
+import Link from 'next/link'
 import SwiperCore, { Pagination } from 'swiper'
 import type { NextPage } from 'next'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -279,9 +280,11 @@ const Home: NextPage = () => {
                 Seja você também um mentor ENG.101 <br />
                 Inscreva-se aqui!
               </p>
-              <a href="http://google.com">
-                Inscreva-se
-              </a>
+              <Link href="/mentored">
+                <a>
+                  Inscreva-se
+                </a>
+              </Link>
             </div>
             <div className="logo">
               <img
@@ -299,9 +302,11 @@ const Home: NextPage = () => {
                 Seja você também um mentor ENG.101 <br />
                 Inscreva-se aqui!
               </p>
-              <a href="http://google.com">
-                Inscreva-se
-              </a>
+              <Link href="mentoring">
+                <a>
+                  Inscreva-se
+                </a>
+              </Link>
             </div>
             <div className="logo">
               <img

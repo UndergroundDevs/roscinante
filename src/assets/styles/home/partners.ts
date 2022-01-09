@@ -149,22 +149,23 @@ export const Partners = styled.section`
 @media screen and (max-width: 1023px) {
   flex-direction: column;
   height: auto;
-  
-  .help-project:nth-child(1) {
-    width: 450px;
-    height: 255px;
-    margin: 0 0 40px 0;
-  }
 
   .help-project:nth-child(1) {
     width: 450px;
     height: 230px;
+    padding: 20px;
     margin: 0 0 40px 0;
+    justify-content: center;
+  }
+
+  .help-project:nth-child(1) .content-pix {
+    display: flex;
+    justify-content: center;
   }
 
   .help-project:nth-child(1) .content-pix .photo {
-    display: block;
-    width: 103px;
+    display: flex;
+    width: 101px;
     height: 101px;
   }
   
@@ -199,6 +200,27 @@ export const Partners = styled.section`
 }
 
 @media screen and (max-width: 767px) {
+  padding: 20px 20px;
+  .help-project:nth-child(1) {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .help-project:nth-child(1) .content-pix {
+    display: flex;
+    width: 100%;
+  }
+
+  .help-project:nth-child(1) .content-pix p {
+    margin: 0 0 0 40px;
+    font-size: 20px;
+  }
+
+  .help-project:nth-child(1) .content-pix .photo {
+    display: flex;
+    width: 101px;
+    height: 101px;
+  }
 }
 
 @media screen and (max-width: 424px) {

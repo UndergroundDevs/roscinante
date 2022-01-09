@@ -138,6 +138,13 @@ export const Feedbacks = styled.section`
   }
 
   @media screen and (max-width: 767px) {
+    padding: 30px 20px;
+    
+    .content-e101 {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 0 30px 0;
+    }
   }
 
   @media screen and (max-width: 424px) {

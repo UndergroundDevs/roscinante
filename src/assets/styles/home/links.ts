@@ -143,6 +143,16 @@ export const Links = styled.section`
   }
 
   @media screen and (max-width: 767px) {
+    .content-box {
+      padding: 25px 15px;
+      width: 100%;
+      max-width: 569px;
+    } 
+
+    .logo {
+      width: 150px;
+      height: 150px;
+    }
   }
 
   @media screen and (max-width: 424px) {
