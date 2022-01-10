@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build && next export",
+    "build": "next build",
     "lint": "next lint",
     "deploy": "cross-env NODE_ENV=production firebase deploy --only functions,hosting"
   },
