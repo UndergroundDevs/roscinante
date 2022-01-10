@@ -234,6 +234,7 @@ export const HeaderMobile = styled.header`
 
     span {
       width: 30px;
+      height: 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
