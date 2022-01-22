@@ -1,6 +1,7 @@
 import Footer from 'components/Footer'
 import Header from 'components/Header'
 import Link from 'next/link'
+import React, { useState, ChangeEvent, MouseEvent } from 'react'
 import SwiperCore, { Pagination } from 'swiper'
 import type { NextPage } from 'next'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -13,13 +14,42 @@ import { OurMembers } from 'assets/styles/home/our-members'
 import { Links } from 'assets/styles/home/links'
 import { Contact } from 'assets/styles/home/contact'
 import { Partners } from 'assets/styles/home/partners'
+import { validationContact } from 'services/validation'
 
-import "swiper/css";
+import "swiper/css"
 import "swiper/css/pagination"
 
 SwiperCore.use([Pagination]);
 
+export interface FieldInitalInput {
+  name: string;
+  email: string;
+  message: string;
+}
+
 const Home: NextPage = () => {
+  const [formData, setFormData] = useState<FieldInitalInput>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  function handleInput(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    let { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
+  }
+
+  async function submitEmail(event: MouseEvent<HTMLButtonElement>) {
+    event.preventDefault();
+    try {
+      await validationContact.validate(formData);
+    } catch (error) {
+      const alertMessage = JSON.parse(JSON.stringify(error));
+      alert(alertMessage.message)
+    }
+  }
+
   return (
     <>
       <Main>
@@ -302,7 +332,7 @@ const Home: NextPage = () => {
                 Seja você também um mentor ENG.101 <br />
                 Inscreva-se aqui!
               </p>
-              <Link href="mentoring">
+              <Link href="/mentoring">
                 <a>
                   Inscreva-se
                 </a>
@@ -320,10 +350,32 @@ const Home: NextPage = () => {
         <Contact>
           <form>
             <h1>Entre em contato</h1>
-            <input type="text" name="email" id="email" placeholder="Insira seu nome aqui!" />
-            <input type="email" name="email" id="email" placeholder="Insita seu email aqui!" />
-            <textarea name="message" id="message" placeholder="Insira sua mensagem aqui!" cols={30} rows={10} />
-            <button type="submit">
+            <input
+              type="text"
+              id="name"
+              placeholder="Insira seu nome aqui!"
+              name="name"
+              value={formData.name}
+              onChange={handleInput}
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Insita seu email aqui!"
+              name="email"
+              value={formData.email}
+              onChange={handleInput}
+            />
+            <textarea
+              id="message"
+              placeholder="Insira sua mensagem aqui!"
+              cols={30}
+              rows={10}
+              name="message"
+              value={formData.message}
+              onChange={handleInput}
+            />
+            <button type="submit" onClick={submitEmail}>
               Enviar
             </button>
           </form>

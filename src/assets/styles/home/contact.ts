@@ -73,6 +73,7 @@ export const Contact = styled.section`
     font-weight: bold;
     border: none;
 
+    cursor: pointer;
     font-size: 16px;
     line-height: 16px;
     letter-spacing: 0.2px;
