@@ -15,6 +15,7 @@ import { Links } from 'assets/styles/home/links'
 import { Contact } from 'assets/styles/home/contact'
 import { Partners } from 'assets/styles/home/partners'
 import { validationContact } from 'services/validation'
+import axios from 'axios'
 
 import "swiper/css"
 import "swiper/css/pagination"
@@ -47,6 +48,20 @@ const Home: NextPage = () => {
     } catch (error) {
       const alertMessage = JSON.parse(JSON.stringify(error));
       alert(alertMessage.message)
+    }
+
+    const URL = process.env.URL + '/email'
+
+    try {
+      const response = await axios.post(URL, {
+        name: "Kevson Filipe",
+        email: "kevsonfilipesantos@gmail.com",
+        message: "Hello World"
+      });
+
+      alert(response.data.data)
+    } catch (err) {
+      alert(err.response.data.error)
     }
   }
 

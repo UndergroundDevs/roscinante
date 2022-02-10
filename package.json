@@ -13,6 +13,7 @@
   "dependencies": {
     "@styled-icons/entypo-social": "^10.34.0",
     "@styled-icons/fluentui-system-regular": "^10.35.0",
+    "axios": "^0.25.0",
     "cross-env": "^7.0.3",
     "firebase-admin": "^10.0.1",
     "firebase-functions": "^3.16.0",

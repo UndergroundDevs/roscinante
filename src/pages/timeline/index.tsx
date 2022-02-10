@@ -708,25 +708,25 @@ const Mentoring: NextPage = () => {
         </div>
         <div className="info">
           <h1>
-            Isso mesmo, nossa mentoria é Totalmente <span>Gratuita</span>!
+            Isso mesmo, nossa mentoria é Totalmente <br /> <span>Gratuita</span>!
           </h1>
           <p>Somos uma organização virtual sem fins lucrativos.</p>
           <ul>
             <li>
-              <span>
-                <Checkmark size="45px" color="#22343D" title="intagram e101" />
+              <span className="red">
+                <Checkmark size="30px" color="#22343D" title="intagram e101" />
               </span>
               <h2>SAT</h2>
             </li>
             <li>
-              <span>
-                <Checkmark size="45px" color="#22343D" title="intagram e101" />
+              <span className="yellow">
+                <Checkmark size="30px" color="#22343D" title="intagram e101" />
               </span>
               <h2>DET</h2>
             </li>
             <li>
-              <span>
-                <Checkmark size="45px" color="#22343D" title="intagram e101" />
+              <span className="blue">
+                <Checkmark size="30px" color="#22343D" title="intagram e101" />
               </span>
               <h2>TOEFL</h2>
             </li>

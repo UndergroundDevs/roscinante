@@ -16,14 +16,6 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
       }
     }
 
-    console.log({
-      emai: process.env.EMAIL,
-      port: process.env.EMAIL,
-      smtp: process.env.SMTP,
-      pass: process.env.PASS,
-    });
-
-
     try {
       await validationContact.validate(data, { abortEarly: true })
     } catch (error: any) {
@@ -38,7 +30,6 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
     try {
       const host = process.env.SMTP;
       const port = process.env.PORT;
-      console.log(String(process.env.PASS));
 
       let transporter = nodemailer.createTransport({
         host: host,
@@ -54,8 +45,9 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
         from: process.env.EMAIL,
         to: process.env.EMAIL,
         replyTo: data.email,
-        subject: "[CONTATO] " + data.name,
+        subject: "[INSCRIÇÃO MENTORADOS] " + data.name,
         html: `
+          <h2>Por que você deseja ser um de nossos mentorados?</h2>
           <h4>${data.name}</h4>
           <p>E-mail: ${data.email}</p>
           <p>${data.message}</p>
