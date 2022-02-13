@@ -12,16 +12,22 @@ export const Main = styled.main`
   section {
     width: 100%;
     height: calc(100vh - 75px);
-    padding: 0 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+  }
+
+  section svg.wolrd {
+    width: 50vw;
+    margin-right: 3vw;
   }
 
   section div.info {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 500px;
+    margin-left: 3vw;
   }
 
   section div.info h1 {
@@ -92,12 +98,45 @@ export const Main = styled.main`
   }
 
   @media screen and (max-width: 1023px) {
+    section.data {
+      width: 100%;
+      height: auto;
+
+      flex-direction: column;
+    }
+
+    section.data svg.wolrd {
+      width: auto;
+      height: 50vh;
+      margin: 30px 0 0 0;
+    }
   }
 
   @media screen and (max-width: 767px) {
+    section.data svg.wolrd {
+      width: 50vw;
+      height: auto;
+      margin: 30px 0 0 0;
+    }
+      
+    section div.info h1 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    section div.info p {
+      font-size: 16px;
+      line-height: 30px;
+      margin-top: 0;
+    }
+
+    section div.info ul li h2 {
+      font-size: 18px;
+    }
   }
 
   @media screen and (max-width: 424px) {
+
   }
 
   @media screen and (max-width: 374px) {
