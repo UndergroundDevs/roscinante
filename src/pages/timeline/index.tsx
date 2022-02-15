@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../../components/Header'
+import Header from '../../components/HeaderHome'
 import type { NextPage } from 'next'
 import { Main } from 'assets/styles/timeline/main'
 import { TimeLine } from 'assets/styles/timeline/section-timeline'

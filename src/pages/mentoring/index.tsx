@@ -1,4 +1,4 @@
-import Header from '../../components/Header'
+import Header from '../../components/HeaderHome'
 import axios from 'axios'
 import { useState, ChangeEvent, MouseEvent } from 'react'
 import type { NextPage } from 'next'

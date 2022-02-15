@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Header from 'components/Header'
+import Header from 'components/HeaderHome'
 import { useState, ChangeEvent, MouseEvent } from 'react';
 import type { NextPage } from 'next'
 import { Main } from 'assets/styles/mentored/main'

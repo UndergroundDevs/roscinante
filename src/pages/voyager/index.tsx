@@ -170,7 +170,7 @@ const Home: NextPage = () => {
             />
           </div>
         </KnowProjects>
-        <AboutProject>
+        <AboutProject id="project">
           <TitleSection>Conheça nosso projeto!</TitleSection>
           <div className="content-about">
             <div className="content">
@@ -271,7 +271,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </Feedbacks>
-        <OurMembers>
+        <OurMembers id="menbers">
           <TitleSection>Nossos membros</TitleSection>
           <p>Conheça alguns de nossos membros</p>
           <div className="content-menbers">
@@ -362,7 +362,7 @@ const Home: NextPage = () => {
           </div>
         </Links>
         <div className="horizon" />
-        <Contact>
+        <Contact id="contact">
           <form>
             <h1>Entre em contato</h1>
             <input
