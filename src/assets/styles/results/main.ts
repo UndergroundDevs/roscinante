@@ -160,24 +160,24 @@ export const Main = styled.main`
   section.results-white div.graph-info ul li:nth-child(1) h2 {
     position: absolute;
     top: 12px;
-    right: 230px;
+    right: 630px;
   }
 
   section.results-white div.graph-info ul li:nth-child(2) h2 {
     position: absolute;
     top: 96px;
-    right: 230px;
+    right: 615px;
   }
   section.results-white div.graph-info ul li:nth-child(3) h2 {
     position: absolute;
     top: 185px;
-    right: 230px;
+    right: 630px;
   }
 
   section.results-white div.graph-info ul li:nth-child(4) h2 {
     position: absolute;
     top: 270px;
-    right: 230px;
+    right: 630px;
   }
 
   section.results-white div.graph-info ul li:nth-child(1) p {

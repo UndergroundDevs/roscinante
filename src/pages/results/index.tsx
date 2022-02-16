@@ -1,4 +1,4 @@
-import Header from 'components/HeaderHome'
+import Header from 'components/Header'
 import type { NextPage } from 'next'
 import { Main } from 'assets/styles/results/main'
 import Graphic from 'components/Graphic'

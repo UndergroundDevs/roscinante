@@ -1,5 +1,39 @@
+import Link from 'next/link'
+import { MouseEvent } from 'react'
 import { FacebookWithCircle, InstagramWithCircle, TwitterWithCircle } from '@styled-icons/entypo-social'
 import { FooterStyle } from './styles'
+
+function onScrollStart(event: MouseEvent<HTMLAnchorElement>) {
+  event.preventDefault()
+  const section = event.currentTarget.getAttribute('href');
+  if (!section)
+    return;
+
+
+  const sectionElement = document.querySelector('#' + section);
+  console.log(sectionElement);
+
+  if (!sectionElement)
+    return;
+
+  sectionElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+}
+
+function onScrollEnd(event: MouseEvent<HTMLAnchorElement>) {
+  event.preventDefault()
+  const section = event.currentTarget.getAttribute('href');
+  if (!section)
+    return;
+
+
+  const sectionElement = document.querySelector('#' + section);
+  console.log(sectionElement);
+
+  if (!sectionElement)
+    return;
+
+  sectionElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+}
 
 const Footer: React.FC = () => {
   return (
@@ -32,22 +66,23 @@ const Footer: React.FC = () => {
         </div>
         <ul className="resources">
           <li>
-            <h1>Recursos</h1>
+            <a href="project" onClick={onScrollEnd}>Projeto</a>
           </li>
           <li>
-            <a href="">Sobre</a>
+            <Link href="/results">
+              <a>Resultados</a>
+            </Link>
           </li>
           <li>
-            <a href="">Blog</a>
+            <Link href="/working">
+              <a>Blog</a>
+            </Link>
           </li>
           <li>
-            <a href="">Contato</a>
+            <a href="contact" onClick={onScrollStart}>Contato</a>
           </li>
           <li>
-            <a href="">Menbros</a>
-          </li>
-          <li>
-            <a href="">Serviços</a>
+            <a href="menbers" onClick={onScrollStart}>Menbros</a>
           </li>
         </ul>
         <div className="news">

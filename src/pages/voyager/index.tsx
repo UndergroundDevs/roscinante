@@ -1,6 +1,7 @@
 import Footer from 'components/Footer'
-import Header from 'components/Header'
+import Header from 'components/HeaderHome'
 import Link from 'next/link'
+import axios from 'axios'
 import React, { useState, ChangeEvent, MouseEvent } from 'react'
 import SwiperCore, { Pagination } from 'swiper'
 import type { NextPage } from 'next'
@@ -15,7 +16,6 @@ import { Links } from 'assets/styles/home/links'
 import { Contact } from 'assets/styles/home/contact'
 import { Partners } from 'assets/styles/home/partners'
 import { validationContact } from 'services/validation'
-import axios from 'axios'
 
 import "swiper/css"
 import "swiper/css/pagination"

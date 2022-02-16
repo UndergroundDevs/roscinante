@@ -22,6 +22,38 @@ const Header: React.FC = () => {
     setIsOpen(!isOpen);
   }
 
+  function onScrollStart(event: MouseEvent<HTMLAnchorElement>) {
+    event.preventDefault()
+    const section = event.currentTarget.getAttribute('href');
+    if (!section)
+      return;
+
+
+    const sectionElement = document.querySelector('#' + section);
+    console.log(sectionElement);
+
+    if (!sectionElement)
+      return;
+
+    sectionElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }
+
+  function onScrollEnd(event: MouseEvent<HTMLAnchorElement>) {
+    event.preventDefault()
+    const section = event.currentTarget.getAttribute('href');
+    if (!section)
+      return;
+
+
+    const sectionElement = document.querySelector('#' + section);
+    console.log(sectionElement);
+
+    if (!sectionElement)
+      return;
+
+    sectionElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }
+
   return (
     <>
       <HeaderStyle shadow={shadow} isOpen={isOpen}>
@@ -35,14 +67,10 @@ const Header: React.FC = () => {
         </Link>
         <ul className="navigation">
           <li>
-            <Link href="/voyager">
-              <a>Projeto</a>
-            </Link>
+            <a href="project" onClick={onScrollEnd}>Projeto</a>
           </li>
           <li>
-            <Link href="/voyager">
-              <a>Menbros</a>
-            </Link>
+            <a href="menbers" onClick={onScrollStart}>Menbros</a>
           </li>
           <li>
             <Link href="/working">
@@ -55,9 +83,7 @@ const Header: React.FC = () => {
             </Link>
           </li>
           <li>
-            <Link href="/voyager">
-              <a>Contato</a>
-            </Link>
+            <a href="contact" onClick={onScrollStart}>Contato</a>
           </li>
         </ul>
         <ul className="sign-donate">
