@@ -17,8 +17,9 @@ export const Links = styled.section`
 
     margin-bottom: 20px;
     padding: 40px;
-    width: 709px;
-    height: 293px;
+    width: 609px;
+    height: 45%;
+    max-height: 300px;
     border-radius: 20px;
   } 
   
@@ -71,9 +72,15 @@ export const Links = styled.section`
 
   .logo {
     display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 156px;
+    max-height: 156px;
+  }
 
-    width: 270px;
-    height: 250px;
+  .logo img {
+    height: 156px;
+    width: 156px;
   }
 
   .bg-color-blue {
@@ -86,8 +93,8 @@ export const Links = styled.section`
 
   @media screen and (min-width: 1024px) and (max-width: 1439px) {
     .content-box {
-      padding: 40px;
-      width: 669px;
+      padding: 20px 40px;
+      width: 500px;
       height: 253px;
     } 
     
@@ -107,7 +114,6 @@ export const Links = styled.section`
       display: flex;
 
       width: 250px;
-      height: 231px;
     }
 
     .bg-color-blue {
@@ -133,37 +139,40 @@ export const Links = styled.section`
     .text p {
       font-size: 14px;
     }
-
-    .logo {
-      display: flex;
-
-      width: 220px;
-      height: 203px;
-    }
   }
 
   @media screen and (max-width: 767px) {
     height: auto;
+
     .content-box {
       padding: 25px 15px;
       width: 100%;
       max-width: 569px;
     } 
-
-    .logo {
-      width: 150px;
-      height: 150px;
-    }
   }
 
   @media screen and (max-width: 424px) {
+    height: auto;
+
     .content-box {
-      height: 280px;
+      padding: 0 15px 30px 15px;
+      flex-direction: column-reverse;
+      display: flex;
+      height: auto;
+      max-height: none;
+    }
+
+    .text h1 {
+      margin: 10px 0;
+    }
+
+    .text p {
+      margin: 10px 0;
     }
 
     .logo {
-      width: 100px;
-      height: 100px;
+      /* width: 100px;
+      height: 100px; */
     }
   }
 

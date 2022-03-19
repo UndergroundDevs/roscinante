@@ -5,6 +5,7 @@ export const Contact = styled.section`
   justify-content: center;
   align-items: center;
 
+  padding: 30px 0;
   width: 100%;
   height: calc(100vh - 75px);
 
@@ -16,9 +17,12 @@ export const Contact = styled.section`
     flex-direction: column;
     justify-content: space-between;
 
-    width: 700px;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    max-height: 500px;
     border-radius: 20px;
-    padding: 40px;
+    padding: 20px 30px;
   }
 
   form h1 {
@@ -30,14 +34,13 @@ export const Contact = styled.section`
     
     font-size: 26px;
     line-height: 30px;
-    margin-bottom: 30px;
   }
 
   form input, form textarea {
     background: #F5F5F5;
     border: 1px solid #E8E8E8;
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 0 20px;
   }
 
@@ -54,15 +57,13 @@ export const Contact = styled.section`
 
   form input {
     width: 100%;
-    height: 54px;
-    margin-bottom: 30px;
+    height: 44px;
   }
 
   form textarea {
     width: 100%;
-    height: 193px;
+    height: 150px;
     padding-top: 20px;
-    margin-bottom: 30px;
   }
 
   form button {
@@ -78,64 +79,30 @@ export const Contact = styled.section`
     line-height: 16px;
     letter-spacing: 0.2px;
     width: 200px;
-    height: 52px;
+    height: 44px;
     left: 50px;
     top: 566px;
-    border-radius: 20px;
-  }
-
-  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    border-radius: 15px;
   }
 
   @media screen and (max-width: 1023px) {
-    padding: 20px;
-
     form {
-      border-radius: 10px;
-      padding: 20px 30px;
-      width: 400px;
-      height: 450px;
-    }
-
-    
-    form input, form textarea {
-      border-radius: 10px;
-    }
-
-    form input {
-      margin-bottom: 20px;
-    }
-
-    form textarea {
-      margin-bottom: 20px;
-    }
-
-    form button {
-      border-radius: 10px;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    form {
-      background: #FFFFFF;
-      border: 1px solid #DDDDDD;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      max-width: 500px;
-      border-radius: 20px;
-      padding: 40px;
+      width: 100%;
+      max-width: 370px;
+      height: 100%;
+      max-height: 500px;
     }
   }
 
   @media screen and (max-width: 424px) {
+    padding: 30px 10px;
+
     form {
+      width: 100%;
+      max-width: 370px;
+      height: 100%;
+      max-height: 500px;
       padding: 20px;
     }
-  }
-
-  @media screen and (max-width: 374px) {
   }
 `

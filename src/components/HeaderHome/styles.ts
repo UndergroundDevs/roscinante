@@ -137,7 +137,7 @@ export const HeaderStyle = styled.header<{ shadow: boolean, isOpen: boolean }>`
     left: ${({ isOpen }) =>
     isOpen
       ? '0%'
-      : '-50%'};;
+      : '-60%'};;
     transition: all .5s;
     flex-direction: column;
     justify-content: inherit;
@@ -190,21 +190,15 @@ export const HeaderStyle = styled.header<{ shadow: boolean, isOpen: boolean }>`
     left: ${({ isOpen }) =>
     isOpen
       ? '0%'
-      : '-70%'};;
+      : '-80%'};;
     transition: all .5s;
     flex-direction: column;
     justify-content: inherit;
-  }
-
-  @media screen and (max-width: 424px) {
   }
 `
 
 export const HeaderMobile = styled.header`
   display: none;
-
-  @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  }
 
   @media screen and (max-width: 1023px) {
     height: 75px;
@@ -271,11 +265,5 @@ export const HeaderMobile = styled.header`
       top: 10px;
       height: 3px;
     }
-  }
-
-  @media screen and (max-width: 767px) {
-  }
-
-  @media screen and (max-width: 424px) {
   }
 `

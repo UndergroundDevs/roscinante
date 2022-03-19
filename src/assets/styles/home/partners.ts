@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Partners = styled.section`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   padding: 0 50px;
@@ -19,6 +19,10 @@ export const Partners = styled.section`
     height: 295px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
+  }
+
+  .help-project + div  {
+    margin-left: 50px;
   }
 
   .help-project h1 {
@@ -131,18 +135,12 @@ export const Partners = styled.section`
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   flex-direction: column;
+
   padding: 15px 30px;
-  
-  .help-project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 40px;
-    
-    width: 637px;
-    height: 285px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
+  height: auto;
+
+  .help-project + div  {
+    margin: 50px 0 0 0;
   }
 }
 
@@ -150,28 +148,8 @@ export const Partners = styled.section`
   flex-direction: column;
   height: auto;
 
-  .help-project:nth-child(1) {
-    width: 450px;
-    height: 230px;
-    padding: 20px;
-    margin: 0 0 40px 0;
-    justify-content: center;
-  }
-
-  .help-project:nth-child(1) .content-pix {
-    display: flex;
-    justify-content: center;
-  }
-
-  .help-project:nth-child(1) .content-pix .photo {
-    display: flex;
-    width: 101px;
-    height: 101px;
-  }
-  
-  .help-project:nth-child(2) {
-    width: 350px;
-    height: 400px;
+  .help-project + div  {
+    margin: 50px 0 0 0;
   }
 
   .swiper {
@@ -201,55 +179,43 @@ export const Partners = styled.section`
 
 @media screen and (max-width: 767px) {
   padding: 20px 20px;
-  .help-project:nth-child(1) {
+
+  .help-project + div  {
+    margin: 25px 0 0 0;
+  }
+
+  .help-project {
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 40px;
     width: 100%;
-    max-width: 450px;
+    height: 300px;
+    border-radius: 30px;
   }
 
-  .help-project:nth-child(1) .content-pix {
-    display: flex;
-    width: 100%;
+  .help-project .content-pix {
+    align-items: center;
+    justify-content: center;
   }
 
-  .help-project:nth-child(1) .content-pix p {
-    margin: 0 0 0 40px;
-    font-size: 20px;
+  .help-project .content-pix p {
+    margin-left: 20px;
+    font-size: 26px;
   }
 
-  .help-project:nth-child(1) .content-pix .photo {
-    display: flex;
-    width: 101px;
-    height: 101px;
+  .help-project .content-pix .photo {
+    display: block;
+    width: 50px;
+    height: 50px;
   }
-}
 
-@media screen and (max-width: 424px) {
+  .help-project .content-pix .photo img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 @media screen and (max-width: 374px) {
-  flex-direction: column;
-  height: auto;
-
-  .help-project {
-    width: 100%;
-  }
-
-  .help-project:nth-child(1) .content-pix .photo {
-    display: flex;
-    width: 60px;
-    height: 60px;
-  }
-  
-  .help-project:nth-child(2) {
-    width: 100%;
-    padding: 20px;
-    height: 300px;
-  }
-
-  .help-project h1 {
-    font-size: 20px;
-  }
-
   .content .info {
     display: flex;
     flex-direction: column;

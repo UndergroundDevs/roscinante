@@ -131,13 +131,13 @@ export const HeaderStyle = styled.header<{ shadow: boolean, isOpen: boolean }>`
   }
 
   @media screen and (max-width: 1023px) {
-    width: 50%;
+    width: 60%;
     height: 100vh;
     padding: 0 0 0 0px;
     left: ${({ isOpen }) =>
     isOpen
       ? '0%'
-      : '-50%'};;
+      : '-60%'};;
     transition: all .5s;
     flex-direction: column;
     justify-content: inherit;
@@ -184,13 +184,13 @@ export const HeaderStyle = styled.header<{ shadow: boolean, isOpen: boolean }>`
   }
 
   @media screen and (max-width: 767px) {
-    width: 70%;
+    width: 75%;
     height: 100vh;
     padding: 0 0 0 0px;
     left: ${({ isOpen }) =>
     isOpen
       ? '0%'
-      : '-70%'};;
+      : '-80%'};;
     transition: all .5s;
     flex-direction: column;
     justify-content: inherit;
@@ -202,9 +202,6 @@ export const HeaderStyle = styled.header<{ shadow: boolean, isOpen: boolean }>`
 
 export const HeaderMobile = styled.header`
   display: none;
-
-  @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  }
 
   @media screen and (max-width: 1023px) {
     height: 75px;
@@ -271,11 +268,5 @@ export const HeaderMobile = styled.header`
       top: 10px;
       height: 3px;
     }
-  }
-
-  @media screen and (max-width: 767px) {
-  }
-
-  @media screen and (max-width: 424px) {
   }
 `
