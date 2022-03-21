@@ -211,80 +211,212 @@ const Home: NextPage = () => {
         </AboutProject>
         <Feedbacks>
           <TitleSection>Feedbacks</TitleSection>
-          <p>
+          <p className="text">
             De uma olhada no feedback de alguns de nossos antigos mentorados!
           </p>
           <div className="content">
             <div className="content-e101">
-              <h2>
-                Product helps you see how many more days you need to work to
-                reach your financial goal.
-              </h2>
               <div className="content-user">
                 <div className="container-img">
                   <img
-                    src="/Ellipse-2.webp"
+                    src="/person/Luiza-Louback-_Mentee_.webp"
                     alt="This is feedback"
                   />
                 </div>
                 <div className="content-data">
-                  <h3>Wahid Ari</h3>
-                  <p>Designer</p>
+                  <h3>Luiza Louback</h3>
+                  <p>Toefl: 111 | DET: 140</p>
                 </div>
               </div>
+              <p>
+                A English 101 me possibilitou conhecimentos práticos e ferramentas únicas
+                que foram essenciais para o meu estudo e preparação para provas de
+                proficiência, como o TOEFL e o Duolinguo English Test. Por meio de
+                uma mentoria individual incrível, eu consegui me desafiar e ir
+                além das minhas expectativas. Além do mais, fiz grandes amigos e
+                criei conexões com a comunidade inspiradora que a English proporciona.
+              </p>
             </div>
             <div className="content-e101">
-              <h2>
-                Product helps you see how many more days you need to work to
-                reach your financial goal.
-              </h2>
               <div className="content-user">
                 <div className="container-img">
                   <img
-                    src="/Ellipse-2.webp"
+                    src="/person/Moizes-Henriques-_mentee_mentor-_-Tufts-_26_.webp"
                     alt="This is feedback"
                   />
                 </div>
                 <div className="content-data">
-                  <h3>Wahid Ari</h3>
-                  <p>Designer</p>
+                  <h3>Moizes Henriques</h3>
+                  <p>Tufts '26 | DET: 125</p>
                 </div>
               </div>
+              <p>
+                Eu tive o prazer de experimentar duas das várias oportunidades que a
+                English101 oferece, que foi ser mentor e mentee. Em todas as vezes
+                eu tive todo suporte da coordenação, e todo mundo na liderança está
+                lá para te ajudar e te compreender. O maior diferencial da English é,
+                com certeza, a comunidade. Há eventos todo mês para integrar a comunidade,
+                e isso me fez me sentir muito pertencente ao projeto, pelo modo ao qual
+                fui recebido e introduzido ao ambiente da English. Recomendo essa experiência
+                para qualquer pessoa de olhos fechados!
+              </p>
             </div>
             <div className="content-e101">
-              <h2>
-                Product helps you see how many more days you need to work to
-                reach your financial goal.
-              </h2>
               <div className="content-user">
                 <div className="container-img">
                   <img
-                    src="/Ellipse-2.webp"
+                    src="/person/David-Sztajnbok-_mentor-de-SAT_.webp"
                     alt="This is feedback"
                   />
                 </div>
                 <div className="content-data">
-                  <h3>Wahid Ari</h3>
-                  <p>Designer</p>
+                  <h3>David</h3>
+                  <p>mentor de SAT</p>
                 </div>
               </div>
+              <p>
+                Na English101, tenho a liberdade de poder montar minhas próprias aulas
+                e ter um contato muito próximo com os alunos. É uma delícia ver o
+                pessoal arrasando nas provas, e tudo isso faz a English101 um lugar
+                ótimo para ensinar (além das fofocas, que apesar de eu não participar
+                muito, sei que rolam soltas).
+              </p>
+            </div>
+            <div className="content-e101">
+              <div className="content-user">
+                <div className="container-img">
+                  <img
+                    src="/person/Luiza-Louback-_Mentee_.webp"
+                    alt="This is feedback"
+                  />
+                </div>
+                <div className="content-data">
+                  <h3>Luana de Paula</h3>
+                  <p>ex-mentee e atual mentora de DET</p>
+                </div>
+              </div>
+              <p>
+                Desde que fui aceita no início de 2021, a comunidade da English101 esteve
+                comigo em todos os passos da minha aplicação pro exterior.
+                Foi muito além de apenas conseguir uma boa nota no DET! A conexão que
+                tenho com meus mentees e com os outros mentores é essencial para mim e
+                tenho muito orgulho de fazer parte de uma organização como a English!
+              </p>
             </div>
           </div>
         </Feedbacks>
         <OurMembers id="menbers">
-          <TitleSection>Nossos membros</TitleSection>
-          <p>Conheça alguns de nossos membros</p>
+          <TitleSection style={{ marginTop: '40px' }}>Nossos membros</TitleSection>
+          {/* <p className="title">Conheça alguns de nossos membros</p> */}
           <div className="content-menbers">
             <div className="content-profile-menbers">
               <div className="photo">
                 <img
-                  src="/Avator.webp"
+                  src="/person/Karen-Mendonça-_Chief-Learning-Officer_.webp"
                   alt="english 101"
                 />
               </div>
-              <h2 className="left-margin">I can take care of your pitch</h2>
+              <div className="content-text">
+                <h2 className="left-margin">Karen Mendonça (Chief Learning Officer)</h2>
+                <p className="left-margin">
+                  Oie! Sou a Karen, tenho 18 anos e sou de Araraquara/SP. Sempre me interessei
+                  muito por educação e estive envolvida com voluntariado, um dos motivos por ter
+                  me juntado à English. E embora tenha começado como mentee, hoje sou uma espécie
+                  de faz tudo, mais conhecida como Chief Learning Officer.
+                </p>
+              </div>
             </div>
             <div className="content-profile-menbers rever-flex">
+              <div className="photo">
+                <img
+                  src="/person/Helena-Barros-_Chief-Executive-officer_.webp"
+                  alt="english 101"
+                />
+              </div>
+              <div className="content-text">
+                <h2 className="right-margin">Helena Barros (Chief Executive Officer)</h2>
+                <p className="right-margin">
+                  Oi, pessoal!! Me chamo Lena, tenho 19 anos e sou de BH/MG.
+                  Fundei a English101 em 2020 e desde então tenho trabalhado
+                  para que possamos ajudar mais estudantes. Atualmente, atuo
+                  como Chief Executive Officer, direcionando e ajudando todos
+                  os departamentos da E101.
+                </p>
+              </div>
+            </div>
+            <div className="content-profile-menbers rever-flex">
+              <div className="photo">
+                <img
+                  // src="/person/Karen-Mendonça-_Chief-Learning-Officer_.webp"
+                  alt="english 101"
+                />
+              </div>
+              <div className="content-text">
+                <h2 className="right-margin">João Lima (Chief Operating Officer)</h2>
+                <p className="right-margin">
+                  E ai! Meu nome é João Lima, tenho 18 anos, e sou de Curitiba, Paraná.
+                  Conheci a E101 pelos programas de mentoria de SAT e DET no fim de 2020, e,
+                  com a ajuda de mentores incríveis, conquistei meu 1420 no SAT e 145 no DET.
+                  Atualmente, atuo como Chief Operating Officer, supervisionando os
+                  departamentos de marketing, administrativo e eventos&parcerias para
+                  garantir que tudo funcione!
+                </p>
+              </div>
+            </div>
+            <div className="content-profile-menbers">
+              <div className="photo">
+                <img
+                  src="/person/Clarice-Pena-_Chief-Marketing-Officer_.webp"
+                  alt="english 101"
+                />
+              </div>
+              <div className="content-text">
+                <h2 className="left-margin">Clarice Pena (Chief Marketing Officer)</h2>
+                <p className="left-margin">
+                  Oi, pessoal! Meu nome é Clarice, tenho 18 anos e sou de Contagem/MG.
+                  Entrei na equipe de marketing da E101 no começo de 2021 e desde então
+                  tenho me dedicado para manter toda a imagem pública do projeto.
+                  Também fui mentee de DET e sou muito grata por todo o apoio da
+                  minha mentora e de toda a comunidade da English.
+                </p>
+              </div>
+            </div>
+            <div className="content-profile-menbers">
+              <div className="photo">
+                <img
+                  src="/person/Laryssa-Vasconcellos-_Chief-Admission-Officer_.webp"
+                  alt="english 101"
+                />
+              </div>
+              <div className="content-text">
+                <h2 className="left-margin">Laryssa Vasconcellos (Chief Admission Officer)</h2>
+                <p className="left-margin">
+                  Oi! Meu nome é Laryssa Vasconcellos, tenho 19 anos, e sou do Rio de Janeiro :)
+                  Entrei na E101 como mentee em 2020, mas em 2021 virei mentora de DET e conquistei
+                  minha nota de 135! Além disso, também sou Chief Admissions Officer, coordenando
+                  o processo de aplicação para a E101 e entrevistando os candidatos.
+                </p>
+              </div>
+            </div>
+            <div className="content-profile-menbers rever-flex">
+              <div className="photo">
+                <img
+                  src="/person/Jose-Miguel-_Chief-Product-Officer_.webp"
+                  alt="english 101"
+                />
+              </div>
+              <div className="content-text">
+                <h2 className="right-margin">Jose-Miguel Rosindo (Chief Product Officer)</h2>
+                <p className="right-margin">
+                  Ei! Me chamo Jose-Miguel, tenho 17 anos e sou natural de Massachusetts,
+                  nos EUA. Com uma nota de 145 no DET, me tornei Mentor e AO, ajudando
+                  vários alunos a alcançarem notas incríveis no teste de proficiência.
+                  Ademais, sou Chief Product Officer, onde sou responsável por parcerias,
+                  eventos e reputação da E101.
+                </p>
+              </div>
+            </div>
+            {/* <div className="content-profile-menbers rever-flex">
               <div className="photo">
                 <img
                   src="/Avator.webp"
@@ -310,7 +442,7 @@ const Home: NextPage = () => {
                 />
               </div>
               <h2 className="left-margin">I can take care of your pitch</h2>
-            </div>
+            </div> */}
           </div>
           <a href="http://google.com">Seja um mentor</a>
         </OurMembers>

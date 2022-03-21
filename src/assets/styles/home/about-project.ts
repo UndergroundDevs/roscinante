@@ -4,7 +4,7 @@ export const AboutProject = styled.section`
   width: 100%;
   height: 100vh;
   max-height: 900px;
-  padding: 120px 0 0 0;
+  padding: 90px 0 30px 0;
   justify-content: flex-start;
   align-items: center;
   background-image: url(./bg.webp);

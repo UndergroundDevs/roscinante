@@ -35,7 +35,7 @@ const Header: React.FC = () => {
     if (!sectionElement)
       return;
 
-    sectionElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function onScrollEnd(event: MouseEvent<HTMLAnchorElement>) {

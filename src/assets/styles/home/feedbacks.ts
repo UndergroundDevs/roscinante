@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const Feedbacks = styled.section`
   width: 100%;
-  height: calc(100vh - 100px);
-  padding: 50px;
+  height: auto;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  p {
+  p.text {
     font-family: 'Poppins' sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -22,25 +22,30 @@ export const Feedbacks = styled.section`
   }
 
   .content {
-    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    display: grid;
+    grid-template-columns: repeat(4, 320px);
+    gap: 0px;
     justify-content: space-between;
   }
 
-  .content-e101 {
+  .content .content-e101 {
     background: #ffffff;
     border: 1px solid #dedede;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 31%;
-    height: 278px;
+    width: auto;
+    min-width: 320px;
+    height: auto;
     max-width: 500px;
+    padding: 20px;
   }
 
   .content .content-e101 h2 {
     display: flex;
     align-items: center;
     height: 50%;
-    padding: 20px 40px;
     font-size: 16px;
     line-height: 28px;
     letter-spacing: 0.2px;
@@ -50,107 +55,86 @@ export const Feedbacks = styled.section`
     display: flex;
     align-items: center;
     flex-direction: row;
-    height: 50%;
-    padding: 20px 40px;
+    margin-bottom: 25px;
   }
 
   .content .content-e101 .content-user .container-img {
-    display: block;
+    display: flex;
     width: 80px;
     height: 80px;
     margin-right: 20px;
   }
 
+  .content .content-e101 .content-user .container-img img {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
   .content .content-e101 .content-user .content-data h3 {
-    margin-bottom: 16px;
     font-size: 16px;
     color: #164c97;
   }
 
   .content .content-e101 .content-user .content-data p {
-    font-size: 13px;
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #252B42;
   }
 
 
   @media screen and (min-width: 1024px) and (max-width: 1439px) {
-    p {
-      margin: 15px 0 15px 0;
+    .content {
+      grid-template-columns: 300px 300px 300px;
+      gap: 20px;
+      max-width: 1024px;
     }
 
-    .content-e101 {
-      padding: 20px;
-    }
-
-    .content-e101 h2 {
-      height: 50%;
-      padding: 0;
-    }
-
-    .content-e101 .content-user {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      height: 50%;
-      padding: 20px 0;
-    }
-
-    .content-e101 .content-user .container-img {
-      display: block;
-      width: 80px;
-      height: 80px;
-      margin-right: 20px;
-    }
-
-    .content-e101 .content-user .content-data h3 {
-      margin-bottom: 16px;
-      font-size: 16px;
-      color: #164c97;
-    }
-
-    .content-e101 .content-user .content-data p {
-      font-size: 13px;
-    }
-    
-    .content .content-e101 h2 {
-      padding: 10px 10px;
-    }
-
-    .content .content-e101 .content-user {
-      padding: 10px 10px;
+    .content .content-e101 {
+      width: 300px;
+      padding: 30px;
     }
   }
 
   @media screen and (max-width: 1023px) {
     height: auto;
-    padding: 50px;
+    padding: 25px;
 
     .content {
-      display: flex;
-      flex-direction: column;
+      grid-template-columns: 300px;
+      gap: 20px;
       justify-content: center;
-      align-items: center;
     }
 
-    .content-e101 {
-      width: 400px;
-      margin: 0 0 30px 0;
+    .content .content-e101 {
+      width: 300px;
+      padding: 30px;
     }
-  }
-
-  @media screen and (max-width: 767px) {
-    padding: 30px 20px;
-    
-    .content-e101 {
-      width: 100%;
-      max-width: 400px;
-      margin: 0 0 30px 0;
-    }
-  }
-
-  @media screen and (max-width: 424px) {
   }
 
   @media screen and (max-width: 374px) {
-  }
+    padding: 10px;
 
+    
+    .content {
+      max-width: 300px;
+      grid-template-columns: 300px;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .content .content-e101 {
+      padding: 10px;
+      width: 300px;
+      min-width: 300px;
+    }
+  }
 `

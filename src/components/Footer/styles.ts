@@ -40,7 +40,7 @@ export const FooterStyle = styled.footer`
 
   .container-footer .content-logo ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
 
     width: 100%;
@@ -48,6 +48,10 @@ export const FooterStyle = styled.footer`
 
   .container-footer .content-logo ul li {
     display: flex;
+  }
+
+  .container-footer .content-logo ul li + li{
+    margin-left: 20px;
   }
 
   .container-footer ul.resources {
@@ -108,41 +112,22 @@ export const FooterStyle = styled.footer`
     height: auto;
   }
 
-  .container-footer .news form input {
-    width: 380px;
+  .container-footer .news form a {
+    width: 200px;
     height: 40px;
-    border: 1px solid #BCD0E5;
-    padding-left: 15px;
-
-    background: #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 4px;
-  }
-
-  .container-footer .news form input::placeholder {
-    font-family: Barlow Condensed;
-    font-style: normal;
-    font-weight: bold;
-    color: #BCD0E5;
-    box-sizing: border-box;
-    font-size: 16px;
-    line-height: 28px;
-  }
-
-  .container-footer .news form button {
-    width: 117px;
-    height: 40px;
-    margin-left: 20px;
     border-radius: 5px;
     font-size: 18px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     box-sizing: border-box;
     border: none;
     background: #E23933;
     font-family: Barlow Condensed;
     font-style: normal;
     font-weight: bold;
-    text-align: center;
     color: #FFFFFF;
   }
   

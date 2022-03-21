@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { MouseEvent } from 'react'
-import { FacebookWithCircle, InstagramWithCircle, TwitterWithCircle } from '@styled-icons/entypo-social'
+import { LinkedinWithCircle, InstagramWithCircle } from '@styled-icons/entypo-social'
 import { FooterStyle } from './styles'
 
 function onScrollStart(event: MouseEvent<HTMLAnchorElement>) {
@@ -48,18 +48,13 @@ const Footer: React.FC = () => {
           </a>
           <ul>
             <li>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.instagram.com/english101asl/" target="_blank" rel="noopener noreferrer">
                 <InstagramWithCircle size="45px" color="#164C97" title="intagram e101" />
               </a>
             </li>
             <li>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
-                <FacebookWithCircle size="45px" color="#164C97" title="intagram e101" />
-              </a>
-            </li>
-            <li>
-              <a href="http://" target="_blank" rel="noopener noreferrer">
-                <TwitterWithCircle size="45px" color="#164C97" title="intagram e101" />
+              <a href="https://www.linkedin.com/company/english101/" target="_blank" rel="noopener noreferrer">
+                <LinkedinWithCircle size="45px" color="#164C97" title="intagram e101" />
               </a>
             </li>
           </ul>
@@ -90,8 +85,12 @@ const Footer: React.FC = () => {
             Faça parte! <br />
             Fique sabendo de todas as novidades!
             <form>
-              <input type="text" placeholder='Digite seu e-mail aqui!' />
-              <button>Enviar</button>
+              <a
+                href="https://gmail.us7.list-manage.com/subscribe?u=20d6058d6463ffd6e88556eab&id=70f7459253"
+                target="_blank"
+              >
+                Newsletter
+              </a>
             </form>
           </h1>
         </div>
