@@ -99,8 +99,8 @@ export const Partners = styled.section`
     text-align: center;
     color: #FFFFFF;
 
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .content .info p {
@@ -132,6 +132,18 @@ export const Partners = styled.section`
   .bg-blue {
     background: #164C97;
   }
+
+  .help-project .content .logo-partern {
+    width: 150px;
+    height: 150px;
+  }
+
+  .help-project .content .logo-partern img {
+    width: 150px;
+    height: 150px;
+    object-position: 0px 0px;
+  }
+
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   flex-direction: column;

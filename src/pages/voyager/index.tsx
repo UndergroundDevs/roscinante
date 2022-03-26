@@ -65,6 +65,40 @@ const Home: NextPage = () => {
     }
   }
 
+
+  function onScrollStart(event: MouseEvent<HTMLAnchorElement>) {
+    event.preventDefault()
+    const section = event.currentTarget.getAttribute('href');
+    if (!section)
+      return;
+
+
+    const sectionElement = document.querySelector('#' + section);
+    console.log(sectionElement);
+
+    if (!sectionElement)
+      return;
+
+    sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function onScrollEnd(event: MouseEvent<HTMLAnchorElement>) {
+    event.preventDefault()
+    const section = event.currentTarget.getAttribute('href');
+    if (!section)
+      return;
+
+
+    const sectionElement = document.querySelector('#' + section);
+    console.log(sectionElement);
+
+    if (!sectionElement)
+      return;
+
+    sectionElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  }
+
+
   return (
     <>
       <Main>
@@ -161,7 +195,7 @@ const Home: NextPage = () => {
                 </li>
               </ul>
             </div>
-            <a href="http://google.com">Vamos começar</a>
+            <a href="project" onClick={onScrollStart}>Vamos começar</a>
           </div>
           <div className="picture">
             <img
@@ -207,7 +241,7 @@ const Home: NextPage = () => {
               <p>Aplicação direta do inglês em sua vida academica.</p>
             </div>
           </div>
-          <a href="">Faça sua inscrição</a>
+          <a href="/mentoring">Faça sua inscrição</a>
         </AboutProject>
         <Feedbacks>
           <TitleSection>Feedbacks</TitleSection>
@@ -444,7 +478,7 @@ const Home: NextPage = () => {
               <h2 className="left-margin">I can take care of your pitch</h2>
             </div> */}
           </div>
-          <a href="http://google.com">Seja um mentor</a>
+          <a href="https://forms.gle/VGoVwaPA8ReLXu61A" target="_blank">Seja um mentor</a>
         </OurMembers>
         <div className="horizon" />
         <Links>
@@ -457,11 +491,9 @@ const Home: NextPage = () => {
                 Seja você também um mentor ENG.101 <br />
                 Inscreva-se aqui!
               </p>
-              <Link href="/mentored">
-                <a>
-                  Inscreva-se
-                </a>
-              </Link>
+              <a href="https://forms.gle/VGoVwaPA8ReLXu61A" target="_blank">
+                Inscreva-se
+              </a>
             </div>
             <div className="logo">
               <img
@@ -549,51 +581,27 @@ const Home: NextPage = () => {
                 <div className="content">
                   <div className="logo-partern">
                     <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
+                      style={{ borderRadius: '50%' }}
+                      src="/Isap-Logo.webp"
+                      alt="International Study Ambassador Program - ISAP | To Promote & Engage"
                     />
                   </div>
                   <div className="info">
-                    <h2>Underground <br /> DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
+                    <h2>International Study Ambassador Program</h2>
+                    <p>To Promote & Engage</p>
                   </div>
                 </div>
                 <div className="content">
                   <div className="logo-partern">
                     <img
-                      src="/underground-slogan-1.webp"
+                      style={{ borderRadius: '50%' }}
+                      src="/Geduc-Logo.webp"
                       alt="english 101"
                     />
                   </div>
                   <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground <br /> DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
+                    <h2>Geduc</h2>
+                    <p>Guardiões da Educação</p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -613,117 +621,14 @@ const Home: NextPage = () => {
                 <div className="content">
                   <div className="logo-partern">
                     <img
-                      src="/underground-slogan-1.webp"
+                      style={{ borderRadius: '50%' }}
+                      src="/Globalizando-Logo-_1_.webp"
                       alt="english 101"
                     />
                   </div>
                   <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground <br /> DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground <br /> DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground <br /> DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground <br /> DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
+                    <h2>Globalizando</h2>
+                    <p>Seja um cidadão global</p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -733,13 +638,29 @@ const Home: NextPage = () => {
                 <div className="content">
                   <div className="logo-partern">
                     <img
-                      src="/underground-slogan-1.webp"
+                      style={{ borderRadius: '50%' }}
+                      src="/Isap-Logo.webp"
+                      alt="International Study Ambassador Program - ISAP | To Promote & Engage"
+                    />
+                  </div>
+                  <div className="info">
+                    <h2>International Study Ambassador Program</h2>
+                    <p>To Promote & Engage</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="content">
+                  <div className="logo-partern">
+                    <img
+                      style={{ borderRadius: '50%' }}
+                      src="/Geduc-Logo.webp"
                       alt="english 101"
                     />
                   </div>
                   <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
+                    <h2>Geduc</h2>
+                    <p>Guardiões da Educação</p>
                   </div>
                 </div>
               </SwiperSlide>
@@ -752,7 +673,7 @@ const Home: NextPage = () => {
                     />
                   </div>
                   <div className="info">
-                    <h2>Underground DEVS</h2>
+                    <h2>Underground <br /> DEVS</h2>
                     <p>Desenvolvimento inteligente</p>
                   </div>
                 </div>
@@ -761,83 +682,14 @@ const Home: NextPage = () => {
                 <div className="content">
                   <div className="logo-partern">
                     <img
-                      src="/underground-slogan-1.webp"
+                      style={{ borderRadius: '50%' }}
+                      src="/Globalizando-Logo-_1_.webp"
                       alt="english 101"
                     />
                   </div>
                   <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="content">
-                  <div className="logo-partern">
-                    <img
-                      src="/underground-slogan-1.webp"
-                      alt="english 101"
-                    />
-                  </div>
-                  <div className="info">
-                    <h2>Underground DEVS</h2>
-                    <p>Desenvolvimento inteligente</p>
+                    <h2>Globalizando</h2>
+                    <p>Seja um cidadão global</p>
                   </div>
                 </div>
               </SwiperSlide>
