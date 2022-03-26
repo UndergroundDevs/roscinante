@@ -83,81 +83,81 @@ const Home: NextPage = () => {
                   <span className="triangle">
                     <span className="sub border-color-1" />
                   </span>
-                  <p className="paragraph-count">103</p>
+                  <p className="paragraph-count">1</p>
                   <div className="country">
                     <svg width={107} height={52} viewBox="0 0 107 52" fill="none">
                       <path d="M21.1272 31.7858H21.1311H90.163C94.2491 31.7858 98.1567 30.2243 101.029 27.4625C103.899 24.7025 105.5 20.9721 105.5 17.0953C105.5 13.2185 103.899 9.48803 101.029 6.7281C98.1567 3.96624 94.2491 2.4048 90.163 2.4048L11.5845 2.4048L11.5823 2.4048C10.2874 2.40294 9.00618 2.64689 7.81248 3.12134C6.61885 3.59577 5.53806 4.29058 4.63058 5.16319C3.72325 6.03569 3.00716 7.06858 2.52038 8.20105C2.03365 9.33336 1.78493 10.5447 1.78683 11.7663V11.7686V48.3005L17.4311 33.2569L17.4393 33.2492C18.4321 32.3086 19.7571 31.7893 21.1272 31.7858Z" fill="#E23933" stroke="white" strokeWidth={3} />
                     </svg>
-                    <p>Brasil</p>
+                    <p>Qatar</p>
                   </div>
                 </li>
                 <li className="bg-color-2 width-2">
                   <span className="triangle-out border-color-2" />
-                  <p className="paragraph-count">103</p>
+                  {/* <p className="paragraph-count">103</p> */}
                 </li>
                 <li className="bg-color-3 border-white width-3">
                   <span className="triangle">
                     <span className="sub border-color-3" />
                   </span>
-                  <p className="paragraph-count">103</p>
+                  <p className="paragraph-count">2</p>
                   <div className="country">
                     <svg width={107} height={52} viewBox="0 0 107 52" fill="none">
                       <path d="M21.1272 31.7858H21.1311H90.163C94.2491 31.7858 98.1567 30.2243 101.029 27.4625C103.899 24.7025 105.5 20.9721 105.5 17.0953C105.5 13.2185 103.899 9.48803 101.029 6.7281C98.1567 3.96624 94.2491 2.4048 90.163 2.4048L11.5845 2.4048L11.5823 2.4048C10.2874 2.40294 9.00618 2.64689 7.81248 3.12134C6.61885 3.59577 5.53806 4.29058 4.63058 5.16319C3.72325 6.03569 3.00716 7.06858 2.52038 8.20105C2.03365 9.33336 1.78493 10.5447 1.78683 11.7663V11.7686V48.3005L17.4311 33.2569L17.4393 33.2492C18.4321 32.3086 19.7571 31.7893 21.1272 31.7858Z" fill="#164C97" stroke="white" strokeWidth={3} />
                     </svg>
-                    <p>Alemanha</p>
+                    <p>India</p>
                   </div>
                 </li>
                 <li className="bg-color-4 width-4">
                   <span className="triangle-out border-color-4" />
-                  <p className="paragraph-count">103</p>
+                  {/* <p className="paragraph-count">103</p> */}
                 </li>
                 <li className="bg-color-5 border-white width-5">
                   <span className="triangle">
                     <span className="sub border-color-5" />
                   </span>
-                  <p className="paragraph-count">103</p>
+                  <p className="paragraph-count">2</p>
                   <div className="country">
                     <svg width={107} height={52} viewBox="0 0 107 52" fill="none">
                       <path d="M21.1272 31.7858H21.1311H90.163C94.2491 31.7858 98.1567 30.2243 101.029 27.4625C103.899 24.7025 105.5 20.9721 105.5 17.0953C105.5 13.2185 103.899 9.48803 101.029 6.7281C98.1567 3.96624 94.2491 2.4048 90.163 2.4048L11.5845 2.4048L11.5823 2.4048C10.2874 2.40294 9.00618 2.64689 7.81248 3.12134C6.61885 3.59577 5.53806 4.29058 4.63058 5.16319C3.72325 6.03569 3.00716 7.06858 2.52038 8.20105C2.03365 9.33336 1.78493 10.5447 1.78683 11.7663V11.7686V48.3005L17.4311 33.2569L17.4393 33.2492C18.4321 32.3086 19.7571 31.7893 21.1272 31.7858Z" fill="#FFCF2D" stroke="white" strokeWidth={3} />
                     </svg>
-                    <p>China</p>
+                    <p>Paraguai</p>
                   </div>
                 </li>
                 <li className="bg-color-6 width-6">
                   <span className="triangle-out border-color-6" />
-                  <p className="paragraph-count">103</p>
+                  {/* <p className="paragraph-count">103</p> */}
                 </li>
                 <li className="bg-color-7 border-white width-7">
                   <span className="triangle">
                     <span className="sub border-color-7" />
                   </span>
-                  <p className="paragraph-count">103</p>
+                  <p className="paragraph-count">1</p>
                   <div className="country">
                     <svg width={107} height={52} viewBox="0 0 107 52" fill="none">
                       <path d="M21.1272 31.7858H21.1311H90.163C94.2491 31.7858 98.1567 30.2243 101.029 27.4625C103.899 24.7025 105.5 20.9721 105.5 17.0953C105.5 13.2185 103.899 9.48803 101.029 6.7281C98.1567 3.96624 94.2491 2.4048 90.163 2.4048L11.5845 2.4048L11.5823 2.4048C10.2874 2.40294 9.00618 2.64689 7.81248 3.12134C6.61885 3.59577 5.53806 4.29058 4.63058 5.16319C3.72325 6.03569 3.00716 7.06858 2.52038 8.20105C2.03365 9.33336 1.78493 10.5447 1.78683 11.7663V11.7686V48.3005L17.4311 33.2569L17.4393 33.2492C18.4321 32.3086 19.7571 31.7893 21.1272 31.7858Z" fill="#22343D" stroke="white" strokeWidth={3} />
                     </svg>
-                    <p>Rússia</p>
+                    <p>Peru</p>
                   </div>
                 </li>
                 <li className="bg-color-8 width-8">
                   <span className="triangle-out border-color-8" />
-                  <p className="paragraph-count">103</p>
+                  {/* <p className="paragraph-count">103</p> */}
                 </li>
                 <li className="bg-color-9 border-white width-9">
                   <span className="triangle">
                     <span className="sub border-color-9" />
                   </span>
-                  <p className="paragraph-count">103</p>
+                  <p className="paragraph-count">0</p>
                   <div className="country">
                     <svg width={107} height={52} viewBox="0 0 107 52" fill="none">
                       <path d="M21.1272 31.7858H21.1311H90.163C94.2491 31.7858 98.1567 30.2243 101.029 27.4625C103.899 24.7025 105.5 20.9721 105.5 17.0953C105.5 13.2185 103.899 9.48803 101.029 6.7281C98.1567 3.96624 94.2491 2.4048 90.163 2.4048L11.5845 2.4048L11.5823 2.4048C10.2874 2.40294 9.00618 2.64689 7.81248 3.12134C6.61885 3.59577 5.53806 4.29058 4.63058 5.16319C3.72325 6.03569 3.00716 7.06858 2.52038 8.20105C2.03365 9.33336 1.78493 10.5447 1.78683 11.7663V11.7686V48.3005L17.4311 33.2569L17.4393 33.2492C18.4321 32.3086 19.7571 31.7893 21.1272 31.7858Z" fill="#A5B4B4" stroke="white" strokeWidth={3} />
                     </svg>
-                    <p>Espanha</p>
+                    <p>Inglaterra</p>
                   </div>
                 </li>
                 <li className="bg-color-10 width-10">
                   <span className="triangle-out border-color-10" />
-                  <p className="paragraph-count">103</p>
+                  {/* <p className="paragraph-count">103</p> */}
                 </li>
               </ul>
             </div>
@@ -286,7 +286,7 @@ const Home: NextPage = () => {
               <div className="content-user">
                 <div className="container-img">
                   <img
-                    src="/person/Luiza-Louback-_Mentee_.webp"
+                    src="/person/Luana-de-Paula-_ex-mentee-e-atual-mentora-de-DET_.webp"
                     alt="This is feedback"
                   />
                 </div>

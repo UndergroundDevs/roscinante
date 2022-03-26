@@ -24,20 +24,20 @@ const Home: NextPage = () => {
               <Graphic />
               <ul>
                 <li>
+                  <h2>Média de DET</h2>
+                  <p>125</p>
+                </li>
+                <li>
+                  <h2>Média de Toefl</h2>
+                  <p>102</p>
+                </li>
+                <li>
                   <h2>Brasil</h2>
-                  <p>40</p>
+                  <p>0</p>
                 </li>
                 <li>
-                  <h2>Alemanha</h2>
-                  <p>60</p>
-                </li>
-                <li>
-                  <h2>China</h2>
-                  <p>80</p>
-                </li>
-                <li>
-                  <h2>Rússia</h2>
-                  <p>70</p>
+                  <h2>Estados Unidos</h2>
+                  <p>0</p>
                 </li>
               </ul>
             </div>
@@ -52,24 +52,28 @@ const Home: NextPage = () => {
               <Graphic2 />
               <ul>
                 <li>
-                  <h2>Brasil</h2>
-                  <p>40</p>
+                  <h2>Qatar</h2>
+                  <p>1</p>
                 </li>
                 <li>
-                  <h2>Alemanha</h2>
-                  <p>60</p>
+                  <h2>India</h2>
+                  <p>2</p>
                 </li>
                 <li>
-                  <h2>China</h2>
-                  <p>80</p>
+                  <h2>Paraguai</h2>
+                  <p>2</p>
                 </li>
                 <li>
-                  <h2>Rússia</h2>
-                  <p>70</p>
+                  <h2>Peru</h2>
+                  <p>1</p>
                 </li>
                 <li>
-                  <h2>França</h2>
-                  <p>70</p>
+                  <h2>Inglaterra</h2>
+                  <p>0</p>
+                </li>
+                <li>
+                  <h2>Noruega</h2>
+                  <p>0</p>
                 </li>
               </ul>
             </div>

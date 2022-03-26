@@ -327,11 +327,11 @@ export const KnowProjects = styled.section`
       font-style: normal;
       font-weight: bold;
       color: #FFFFFF;
-
+      width: 70px;
       font-size: 12px;
       line-height: 11px;
       top: 9px;
-      left: 25px;
+      left: 20px;
       margin: 0;
       z-index: 3;
     }
@@ -355,7 +355,7 @@ export const KnowProjects = styled.section`
 
       padding: 0 70px 0 0;
       height: 21px;
-      font-size: 9px;
+      font-size: 14pxpx;
       line-height: 11px;
       margin: 0;
     }
