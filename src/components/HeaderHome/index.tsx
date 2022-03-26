@@ -88,7 +88,7 @@ const Header: React.FC = () => {
         </ul>
         <ul className="sign-donate">
           <li>
-            <Link href="/donate">
+            <Link href="/working">
               <a className="red">Doe Agora</a>
             </Link>
           </li>
