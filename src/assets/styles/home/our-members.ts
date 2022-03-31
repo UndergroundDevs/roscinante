@@ -114,10 +114,10 @@ export const OurMembers = styled.section`
     object-position: left top;
   }
 
-  .content-profile-menbers:nth-child(3) .photo {
+  .content-profile-menbers:nth-child(3) .photo img {
     border: 4px solid #164C97;
-    background-color: #164C97;
   }
+
   .content-profile-menbers:nth-child(4) .photo img {
     border: 4px solid #F5C55F;
   }

@@ -12,7 +12,6 @@ const Mentoring: NextPage = () => {
     email: "",
     message: "",
   });
-  const [loading, setLoading] = useState(false);
 
   function handleInput(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     let { name, value } = event.target;
@@ -31,11 +30,7 @@ const Mentoring: NextPage = () => {
     const URL = process.env.URL + '/mentoring'
 
     try {
-      const response = await axios.post(URL, {
-        name: "Kevson Filipe",
-        email: "kevsonfilipesantos@gmail.com",
-        message: "Hello World"
-      });
+      const response = await axios.post(URL, { ...formData });
 
       alert(response.data.data)
     } catch (err) {
@@ -69,7 +64,7 @@ const Mentoring: NextPage = () => {
 
           <textarea
             id="message"
-            placeholder="Por que deseja se tornar um mentor da ENG101?"
+            placeholder="Por que deseja se tornar um membro da e101?"
             cols={30}
             rows={10}
             name="message"

@@ -14,10 +14,9 @@ const Home: NextPage = () => {
             <div className="text-content">
               <h1>Resultados</h1>
               <p>
-                Somos uma organização virtual sem fins lucrativos voltada
-                para a preparação de jovens para as provas de proficiência
-                em inglês TOEFL e DET e para prova de inglês e matemática
-                chamada SAT
+                Por meio de nossas mentorias individualizadas de DET e TOEFL, obtivemos
+                resultados de excelência nestas provas. Nossos mentees atingiram nível
+                C1+, isto é, mostraram grande fluência e domínio da língua inglesa.
               </p>
             </div>
             <div className="graph-info">
@@ -33,11 +32,11 @@ const Home: NextPage = () => {
                 </li>
                 <li>
                   <h2>Brasil</h2>
-                  <p>0</p>
+                  <p>260</p>
                 </li>
                 <li>
                   <h2>Estados Unidos</h2>
-                  <p>0</p>
+                  <p>5</p>
                 </li>
               </ul>
             </div>
@@ -45,7 +44,6 @@ const Home: NextPage = () => {
         </section>
         <section className="results-blue">
           <h1>Número de alunos em cada país</h1>
-
           <div className="max-content">
             <img src="/Logo-Simplifica-Branca.webp" alt="logo english 101" />
             <div className="graph-info">
@@ -61,11 +59,11 @@ const Home: NextPage = () => {
                 </li>
                 <li>
                   <h2>Paraguai</h2>
-                  <p>2</p>
+                  <p>3</p>
                 </li>
                 <li>
                   <h2>Peru</h2>
-                  <p>1</p>
+                  <p>2</p>
                 </li>
                 <li>
                   <h2>Inglaterra</h2>

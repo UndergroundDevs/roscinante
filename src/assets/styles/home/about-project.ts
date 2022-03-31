@@ -20,7 +20,7 @@ export const AboutProject = styled.section`
     font-size: 15px;
     line-height: 24px;
     border-radius: 5px;
-    margin-top: 50px;
+    margin-top: 25px;
   
     display: flex;
     align-items: center;
@@ -96,7 +96,6 @@ export const AboutProject = styled.section`
   .black-span {
     background: #272727;
   }
-
 
   @media screen and (min-width: 1024px) and (max-width: 1439px) {
     padding: 20px 0 0 0;

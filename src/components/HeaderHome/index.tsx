@@ -67,10 +67,10 @@ const Header: React.FC = () => {
         </Link>
         <ul className="navigation">
           <li>
-            <a href="project" onClick={onScrollEnd}>Projeto</a>
+            <a href="project" onClick={onScrollStart}>Projeto</a>
           </li>
           <li>
-            <a href="menbers" onClick={onScrollStart}>Menbros</a>
+            <a href="menbers" onClick={onScrollStart}>Membros</a>
           </li>
           <li>
             <Link href="/working">
@@ -83,7 +83,7 @@ const Header: React.FC = () => {
             </Link>
           </li>
           <li>
-            <a href="contact" onClick={onScrollStart}>Contato</a>
+            <a href="contact" onClick={onScrollEnd}>Contato</a>
           </li>
         </ul>
         <ul className="sign-donate">

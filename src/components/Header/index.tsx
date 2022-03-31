@@ -36,12 +36,12 @@ const Header: React.FC = () => {
         <ul className="navigation">
           <li>
             <Link href="/voyager">
-              <a >Projeto</a>
+              <a>Projeto</a>
             </Link>
           </li>
           <li>
             <Link href="/voyager">
-              <a>Menbros</a>
+              <a>Membros</a>
             </Link>
           </li>
           <li>

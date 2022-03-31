@@ -30,11 +30,7 @@ const Mentoring: NextPage = () => {
     const URL = process.env.URL + '/email'
 
     try {
-      const response = await axios.post(URL, {
-        name: "Kevson Filipe",
-        email: "kevsonfilipesantos@gmail.com",
-        message: "Hello World"
-      });
+      const response = await axios.post(URL, { ...formData });
 
       alert(response.data.data)
     } catch (err) {
@@ -68,7 +64,7 @@ const Mentoring: NextPage = () => {
 
           <textarea
             id="message"
-            placeholder="Por que deseja se tornar um mentor da ENG101?"
+            placeholder="Digite aqui sua mensagem para e101?"
             cols={30}
             rows={10}
             name="message"

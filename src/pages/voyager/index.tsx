@@ -16,12 +16,10 @@ import { Links } from 'assets/styles/home/links'
 import { Contact } from 'assets/styles/home/contact'
 import { Partners } from 'assets/styles/home/partners'
 import { validationContact } from 'services/validation'
-
 import "swiper/css"
 import "swiper/css/pagination"
 
 SwiperCore.use([Pagination]);
-
 export interface FieldInitalInput {
   name: string;
   email: string;
@@ -53,18 +51,13 @@ const Home: NextPage = () => {
     const URL = process.env.URL + '/email'
 
     try {
-      const response = await axios.post(URL, {
-        name: "Kevson Filipe",
-        email: "kevsonfilipesantos@gmail.com",
-        message: "Hello World"
-      });
+      const response = await axios.post(URL, { ...formData });
 
       alert(response.data.data)
     } catch (err) {
       alert(err.response.data.error)
     }
   }
-
 
   function onScrollStart(event: MouseEvent<HTMLAnchorElement>) {
     event.preventDefault()
@@ -97,7 +90,6 @@ const Home: NextPage = () => {
 
     sectionElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }
-
 
   return (
     <>
@@ -181,7 +173,7 @@ const Home: NextPage = () => {
                   <span className="triangle">
                     <span className="sub border-color-9" />
                   </span>
-                  <p className="paragraph-count">0</p>
+                  <p className="paragraph-count">1</p>
                   <div className="country">
                     <svg width={107} height={52} viewBox="0 0 107 52" fill="none">
                       <path d="M21.1272 31.7858H21.1311H90.163C94.2491 31.7858 98.1567 30.2243 101.029 27.4625C103.899 24.7025 105.5 20.9721 105.5 17.0953C105.5 13.2185 103.899 9.48803 101.029 6.7281C98.1567 3.96624 94.2491 2.4048 90.163 2.4048L11.5845 2.4048L11.5823 2.4048C10.2874 2.40294 9.00618 2.64689 7.81248 3.12134C6.61885 3.59577 5.53806 4.29058 4.63058 5.16319C3.72325 6.03569 3.00716 7.06858 2.52038 8.20105C2.03365 9.33336 1.78493 10.5447 1.78683 11.7663V11.7686V48.3005L17.4311 33.2569L17.4393 33.2492C18.4321 32.3086 19.7571 31.7893 21.1272 31.7858Z" fill="#A5B4B4" stroke="white" strokeWidth={3} />
@@ -211,7 +203,9 @@ const Home: NextPage = () => {
               <span className="mark-point yellow-span" />
               <h1>DET</h1>
               <p>
-                Duolingo English Test: simulado e como estudar para a prova.
+                O Duolingo English Test é uma prova de proficiência em inglês que
+                vem se tornando bastante popular. Ele é uma prova adaptativa e
+                dura aproximadamente 1h.
               </p>
             </div>
             <div className="content">
@@ -219,9 +213,10 @@ const Home: NextPage = () => {
               <div>
                 <h1>SAT</h1>
                 <p>
-                  Exame educacional padronizado nos Estados Unidos aplicado a
-                  estudantes do ensino médio, que serve de critério para
-                  admissão nas universidades norte-americanas.{' '}
+                  O Scholastic Aptitude Test é um exame educacional padronizado de inglês e
+                  matemática. Ele costuma ser aplicado a estudantes do ensino médio e
+                  serve de critério para admissão nas universidades dos EUA. Podemos
+                  considerá-lo o “ENEM americano”.
                 </p>
               </div>
             </div>
@@ -229,16 +224,19 @@ const Home: NextPage = () => {
               <span className="mark-point red-span" />
               <h1>TOEFL</h1>
               <p>
-                O Test of English as a Foreign Language ou Teste de Inglês como
-                Língua Estrangeira é um exame que tem o objetivo de avaliar o
-                potencial individual de falar e entender o inglês em nível
-                acadêmico.
+                O Test Of English as a Foreign Language é uma prova de proficiência em
+                inglês bastante disseminada. Ele é estruturado em quatro seções e tem
+                duração de 4h.
               </p>
             </div>
             <div className="content">
               <span className="mark-point black-span" />
               <h1>APPLICATION</h1>
-              <p>Aplicação direta do inglês em sua vida academica.</p>
+              <p>
+                Como muitos de nossos membros buscam oportunidades no exterior, tentamos auxiliá-los
+                neste processo, conhecido como application. Por isso, promovemos eventos e
+                workshops diversos.
+              </p>
             </div>
           </div>
           <a href="/mentoring">Faça sua inscrição</a>
@@ -381,7 +379,7 @@ const Home: NextPage = () => {
             <div className="content-profile-menbers rever-flex">
               <div className="photo">
                 <img
-                  // src="/person/Karen-Mendonça-_Chief-Learning-Officer_.webp"
+                  src="/person/João-Lima-_Chief-Operating-Officer_.webp"
                   alt="english 101"
                 />
               </div>
@@ -488,7 +486,7 @@ const Home: NextPage = () => {
                 Faça parte do nosso time
               </h1>
               <p>
-                Seja você também um mentor ENG.101 <br />
+                Seja você também um mentor e101 <br />
                 Inscreva-se aqui!
               </p>
               <a href="https://forms.gle/VGoVwaPA8ReLXu61A" target="_blank">
@@ -505,10 +503,10 @@ const Home: NextPage = () => {
           <div className="content-box bg-color-yellow">
             <div className="text">
               <h1>
-                Faça parte do nosso time
+                Seja um de nossos mentorados!
               </h1>
               <p>
-                Seja você também um mentor ENG.101 <br />
+                Faça parte do nosso projeto <br />
                 Inscreva-se aqui!
               </p>
               <Link href="/mentoring">
