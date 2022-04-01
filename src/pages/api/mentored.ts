@@ -67,6 +67,14 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
       })
     }
   } else {
+    response.setHeader("Allow", ["POST"]);
     return response.status(400).json({ message: "Not Found" });
   }
 }
+
+export const config = {
+  api: {
+    // disables call to body parsing module
+    bodyParser: false,
+  }
+};
