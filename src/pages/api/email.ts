@@ -16,14 +16,6 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
       }
     }
 
-    console.log({
-      emai: process.env.EMAIL,
-      port: process.env.EMAIL,
-      smtp: process.env.SMTP,
-      pass: process.env.PASS,
-    });
-
-
     try {
       await validationContact.validate(data, { abortEarly: true })
     } catch (error: any) {
@@ -38,15 +30,14 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
     try {
       const host = process.env.SMTP;
       const port = process.env.PORT;
-      console.log(String(process.env.PASS));
 
       let transporter = nodemailer.createTransport({
         host: host,
         port: port,
         secure: false,
         auth: {
-          user: 'kevsonfilipesantos@gmail.com', // generated ethereal user
-          pass: 'xaqflbasbnailysg', // generated ethereal password
+          user: process.env.EMAIL, // generated ethereal user
+          pass: process.env.PASS, // generated ethereal password
         },
       });
 
@@ -59,7 +50,12 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
           <h4>${data.name}</h4>
           <p>E-mail: ${data.email}</p>
           <p>${data.message}</p>
-        `
+        `,
+        headers: {
+          "x-priority": "1",
+          "x-msmail-priority": "High",
+          importance: "high"
+        },
       });
 
       return response.status(200).json({
@@ -68,7 +64,6 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
         status: true,
       })
     } catch (error) {
-      console.log(error)
       return response.status(500).json({
         data: null,
         error: 'Houve um erro interno no servidor estamos tentando resolve-lo',

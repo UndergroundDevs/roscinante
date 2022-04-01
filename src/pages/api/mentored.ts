@@ -36,8 +36,8 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
         port: port,
         secure: false,
         auth: {
-          user: 'kevsonfilipesantos@gmail.com', // generated ethereal user
-          pass: 'xaqflbasbnailysg', // generated ethereal password
+          user: process.env.EMAIL, // generated ethereal user
+          pass: process.env.PASS, // generated ethereal password
         },
       });
 
@@ -60,7 +60,6 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
         status: true,
       })
     } catch (error) {
-      console.log(error)
       return response.status(500).json({
         data: null,
         error: 'Houve um erro interno no servidor estamos tentando resolve-lo',

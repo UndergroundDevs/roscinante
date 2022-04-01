@@ -28,10 +28,7 @@ const Header: React.FC = () => {
     if (!section)
       return;
 
-
     const sectionElement = document.querySelector('#' + section);
-    console.log(sectionElement);
-
     if (!sectionElement)
       return;
 
@@ -46,7 +43,6 @@ const Header: React.FC = () => {
 
 
     const sectionElement = document.querySelector('#' + section);
-    console.log(sectionElement);
 
     if (!sectionElement)
       return;

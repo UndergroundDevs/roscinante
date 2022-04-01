@@ -12,6 +12,7 @@ const Mentoring: NextPage = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   function handleInput(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     let { name, value } = event.target;
@@ -20,21 +21,24 @@ const Mentoring: NextPage = () => {
 
   async function submitEmail(event: MouseEvent<HTMLButtonElement>) {
     event.preventDefault();
+    setLoading(true)
+
     try {
       await validationContact.validate(formData);
     } catch (error) {
       const alertMessage = JSON.parse(JSON.stringify(error));
-      alert(alertMessage.message)
+      setLoading(false)
+      return alert(alertMessage.message)
     }
 
-    const URL = process.env.URL + '/email'
-
+    const URL = '/api/email'
     try {
       const response = await axios.post(URL, { ...formData });
-
-      alert(response.data.data)
+      setLoading(false)
+      return alert(response.data.data)
     } catch (err) {
-      alert(err.response.data.error)
+      setLoading(false)
+      return alert(err.response.data.error)
     }
   }
 
@@ -77,6 +81,11 @@ const Mentoring: NextPage = () => {
           </button>
         </form>
       </section>
+      <div className="loading" style={{
+        display: !loading ? "none" : "flex"
+      }}>
+        <div className="lo"></div>
+      </div>
     </Main>
   );
 }

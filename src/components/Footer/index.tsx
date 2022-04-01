@@ -11,7 +11,7 @@ function onScrollStart(event: MouseEvent<HTMLAnchorElement>) {
 
 
   const sectionElement = document.querySelector('#' + section);
-  console.log(sectionElement);
+  (sectionElement);
 
   if (!sectionElement)
     return;
@@ -27,8 +27,6 @@ function onScrollEnd(event: MouseEvent<HTMLAnchorElement>) {
 
 
   const sectionElement = document.querySelector('#' + section);
-  console.log(sectionElement);
-
   if (!sectionElement)
     return;
 

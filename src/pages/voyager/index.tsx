@@ -41,21 +41,23 @@ const Home: NextPage = () => {
 
   async function submitEmail(event: MouseEvent<HTMLButtonElement>) {
     event.preventDefault();
+    setLoading(true)
     try {
       await validationContact.validate(formData);
     } catch (error) {
       const alertMessage = JSON.parse(JSON.stringify(error));
-      alert(alertMessage.message)
+      setLoading(false)
+      return alert(alertMessage.message)
     }
 
-    const URL = process.env.URL + '/email'
-
+    const URL = '/api/email'
     try {
       const response = await axios.post(URL, { ...formData });
-
-      alert(response.data.data)
+      setLoading(false)
+      return alert(response.data.data)
     } catch (err) {
-      alert(err.response.data.error)
+      setLoading(false)
+      return alert(err.response.data.error)
     }
   }
 
@@ -65,10 +67,7 @@ const Home: NextPage = () => {
     if (!section)
       return;
 
-
     const sectionElement = document.querySelector('#' + section);
-    console.log(sectionElement);
-
     if (!sectionElement)
       return;
 
@@ -83,8 +82,6 @@ const Home: NextPage = () => {
 
 
     const sectionElement = document.querySelector('#' + section);
-    console.log(sectionElement);
-
     if (!sectionElement)
       return;
 
@@ -695,6 +692,11 @@ const Home: NextPage = () => {
           </div>
         </Partners>
         <Footer />
+        <div className="loading" style={{
+          display: !loading ? "none" : "flex"
+        }}>
+          <div className="lo"></div>
+        </div>
       </Main>
     </>
   )

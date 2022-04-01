@@ -36,8 +36,8 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
         port: port,
         secure: false,
         auth: {
-          user: 'kevsonfilipesantos@gmail.com', // generated ethereal user
-          pass: 'xaqflbasbnailysg', // generated ethereal password
+          user: process.env.EMAIL, // generated ethereal user
+          pass: process.env.PASS, // generated ethereal password
         },
       });
 
@@ -47,7 +47,7 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
         replyTo: data.email,
         subject: "[INSCRIÇÃO MENTORIA] " + data.name,
         html: `
-          <h2>Por que deseja se tornar um mentor da ENG101?</h2>
+          <h2>Por que deseja se tornar um mentor da e101?</h2>
           <h4>${data.name}</h4>
           <p>E-mail: ${data.email}</p>
           <p>${data.message}</p>
@@ -60,7 +60,6 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
         status: true,
       })
     } catch (error) {
-      console.log(error)
       return response.status(500).json({
         data: null,
         error: 'Houve um erro interno no servidor estamos tentando resolve-lo',
