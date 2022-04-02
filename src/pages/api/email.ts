@@ -41,7 +41,7 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
           importance: "high"
         },
       });
-
+      console.log('E-mail enviadoasdasd');
       return response.status(200).json({ message: "E-mail enviadoasdasd" })
     } catch (error) {
       return response.status(500).json({ message: "Houve um erro interno no servidor estamos tentando resolve-lo" })
