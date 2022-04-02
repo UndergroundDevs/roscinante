@@ -1,6 +1,7 @@
 import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer";
+import { SMTPClient } from 'emailjs';
+
 type FieldInitalInput = {
   name: string;
   email: string;
@@ -14,38 +15,26 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
     try {
       const host = process.env.SMTP;
       const port = process.env.PORT;
-      let transporter = nodemailer.createTransport({
+      const client = new SMTPClient({
+        user: process.env.EMAIL,
+        password: process.env.PASS,
         host: host,
-        port: port,
-        secure: false,
-        auth: {
-          user: process.env.EMAIL, // generated ethereal user
-          pass: process.env.PASS, // generated ethereal password
-        },
+        ssl: true,
       });
+
 
       console.log('E-mail enviadoasdasd');
       const fact = (await axios.get('https://catfact.ninja/fact')).data
       console.log('hello', fact);
 
-      transporter.sendMail({
+      const message = await client.sendAsync({
+        text: 'i hope this works',
         from: process.env.EMAIL,
-        to: process.env.EMAIL,
-        replyTo: data.email,
-        subject: "[INSCRIÇÃO MENTORADOS] " + data.name,
-        html: `
-          <h2>Por que você deseja ser um de nossos mentorados?</h2>
-          <h4>${data.name}</h4>
-          <p>E-mail: ${data.email}</p>
-          <p>${data.message}</p>
-        `,
-        headers: {
-          "x-priority": "1",
-          "x-msmail-priority": "High",
-          importance: "high"
-        },
+        to: 'kevsonfilipesantos@gmail.com',
+        subject: 'testing emailjs',
       });
-      console.log('E-mail enviadoasdasd');
+
+      console.log('E-mail enviadoasdasd', message);
       return response.status(200).json({ message: "E-mail enviadoasdasd" })
     } catch (error) {
       return response.status(500).json({ message: "Houve um erro interno no servidor estamos tentando resolve-lo" })
