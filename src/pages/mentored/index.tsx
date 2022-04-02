@@ -32,11 +32,7 @@ const Mentored: NextPage = () => {
 
     const URL = '/api/mentored'
     try {
-      const response = await axios.post(URL, {
-        name: "Kevson Filipe",
-        email: "kevsonfilipesantos@gmail.com",
-        message: "Hello World"
-      });
+      const response = await axios.post(URL, { ...formData });
       setLoading(false)
       return alert(response.data.data)
     } catch (err) {
