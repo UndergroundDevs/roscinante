@@ -35,8 +35,6 @@ const Mentoring: NextPage = () => {
     try {
       const response = await axios.post(URL, { ...formData });
       setLoading(false)
-      console.log(response.data.data);
-
       return alert(response.data.data)
     } catch (err) {
       setLoading(false)

@@ -236,7 +236,9 @@ const Home: NextPage = () => {
               </p>
             </div>
           </div>
-          <a href="/mentoring">Faça sua inscrição</a>
+          <Link href="/mentored">
+            <a>Faça sua inscrição</a>
+          </Link>
         </AboutProject>
         <Feedbacks>
           <TitleSection>Feedbacks</TitleSection>
