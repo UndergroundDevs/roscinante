@@ -13,6 +13,8 @@ type FieldInitalInput = {
 
 export default async function sendEmail(request: NextApiRequest, response: NextApiResponse<DataResponse>) {
   if (request.method === "POST") {
+    console.log(request.method);
+
     const data = request.body as FieldInitalInput;
 
     try {
@@ -28,7 +30,7 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
         },
       });
 
-      transporter.sendMail({
+      await transporter.sendMail({
         from: process.env.EMAIL,
         to: process.env.EMAIL,
         replyTo: data.email,
@@ -40,7 +42,7 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
           <p>${data.message}</p>
         `
       });
-      return response.status(200).json({ message: "E-mail enviado" })
+      return response.status(200).end({ message: "E-mail enviado" })
     } catch (error) {
       console.log(error)
       return response.status(500).json({ message: "Houve um erro interno no servidor estamos tentando resolve-lo" })
