@@ -21,9 +21,12 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
     }
 
     try {
+      console.log('primeiro try catch');
       await validationContact.validate(data, { abortEarly: true })
     } catch (error: any) {
       const err = JSON.parse(JSON.stringify(error))
+      console.log(error);
+
       return response.status(400).json({
         status: false,
         data: null,
@@ -68,8 +71,7 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
         status: true,
       })
     } catch (error) {
-      console.log('hello');
-
+      console.log(error);
       return response.status(500).json({
         data: null,
         error: 'Houve um erro interno no servidor estamos tentando resolve-lo',
