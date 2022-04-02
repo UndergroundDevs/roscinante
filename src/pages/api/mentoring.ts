@@ -17,17 +17,6 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
     }
 
     try {
-      await validationContact.validate(data, { abortEarly: true })
-    } catch (error: any) {
-      const err = JSON.parse(JSON.stringify(error))
-      return response.status(400).json({
-        status: false,
-        data: null,
-        error: err.message
-      });
-    }
-
-    try {
       const host = process.env.SMTP;
       const port = process.env.PORT;
 
@@ -47,11 +36,16 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
         replyTo: data.email,
         subject: "[INSCRIÇÃO MENTORIA] " + data.name,
         html: `
-          <h2>Por que deseja se tornar um mentor da e101?</h2>
+          <h2>CONTATO</h2>
           <h4>${data.name}</h4>
           <p>E-mail: ${data.email}</p>
           <p>${data.message}</p>
-        `
+        `,
+        headers: {
+          "x-priority": "1",
+          "x-msmail-priority": "High",
+          importance: "high"
+        },
       });
 
       return response.status(200).json({
