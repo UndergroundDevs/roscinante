@@ -1,3 +1,4 @@
+import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 type FieldInitalInput = {
@@ -24,23 +25,26 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
       });
 
       console.log('E-mail enviadoasdasd');
-      await transporter.sendMail({
-        from: process.env.EMAIL,
-        to: process.env.EMAIL,
-        replyTo: data.email,
-        subject: "[INSCRIÇÃO MENTORADOS] " + data.name,
-        html: `
-          <h2>Por que você deseja ser um de nossos mentorados?</h2>
-          <h4>${data.name}</h4>
-          <p>E-mail: ${data.email}</p>
-          <p>${data.message}</p>
-        `,
-        headers: {
-          "x-priority": "1",
-          "x-msmail-priority": "High",
-          importance: "high"
-        },
-      });
+      const fact = await (await axios.get('https://catfact.ninja/fact')).data
+      console.log('hello', fact);
+
+      // await transporter.sendMail({
+      //   from: process.env.EMAIL,
+      //   to: process.env.EMAIL,
+      //   replyTo: data.email,
+      //   subject: "[INSCRIÇÃO MENTORADOS] " + data.name,
+      //   html: `
+      //     <h2>Por que você deseja ser um de nossos mentorados?</h2>
+      //     <h4>${data.name}</h4>
+      //     <p>E-mail: ${data.email}</p>
+      //     <p>${data.message}</p>
+      //   `,
+      //   headers: {
+      //     "x-priority": "1",
+      //     "x-msmail-priority": "High",
+      //     importance: "high"
+      //   },
+      // });
       console.log('E-mail enviadoasdasd');
       return response.status(200).json({ message: "E-mail enviadoasdasd" })
     } catch (error) {
