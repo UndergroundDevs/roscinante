@@ -1,8 +1,8 @@
 import axios from 'axios';
-import Header from 'components/HeaderHome'
+import Header from 'components/Header';
 import { useState, ChangeEvent, MouseEvent } from 'react';
-import type { NextPage } from 'next'
-import { Main } from 'assets/styles/mentored/main'
+import type { NextPage } from 'next';
+import { Main } from 'assets/styles/mentored/main';
 import { FieldInitalInput } from 'pages/voyager';
 import { validationContact } from 'services/validation';
 
@@ -21,25 +21,27 @@ const Mentored: NextPage = () => {
 
   async function submitEmail(event: MouseEvent<HTMLButtonElement>) {
     event.preventDefault();
+    setLoading(true)
     try {
       await validationContact.validate(formData);
     } catch (error) {
+      setLoading(false)
       const alertMessage = JSON.parse(JSON.stringify(error));
-      alert(alertMessage.message)
+      return alert(alertMessage.message)
     }
 
-    const URL = process.env.URL + '/mentored'
-
+    const URL = '/api/mentored'
     try {
       const response = await axios.post(URL, {
         name: "Kevson Filipe",
         email: "kevsonfilipesantos@gmail.com",
         message: "Hello World"
       });
-
-      alert(response.data.data)
+      setLoading(false)
+      return alert(response.data.data)
     } catch (err) {
-      alert(err.response.data.error)
+      setLoading(false)
+      return alert(err.response.data.error)
     }
   }
 
@@ -80,6 +82,11 @@ const Mentored: NextPage = () => {
           </button>
         </form>
       </section>
+      <div className="loading" style={{
+        display: !loading ? "none" : "flex"
+      }}>
+        <div className="lo"></div>
+      </div>
     </Main>
   );
 }

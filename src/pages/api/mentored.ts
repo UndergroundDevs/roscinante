@@ -1,7 +1,6 @@
-// import nodemailer from 'nodemailer'
 import { FieldInitalInput } from 'pages/voyager'
 import { validationContact } from 'services/validation'
-
+import { SMTPClient } from 'emailjs';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async (request: NextApiRequest, response: NextApiResponse) => {
@@ -28,31 +27,41 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
     }
 
     try {
-      // const host = process.env.SMTP;
-      // const port = process.env.PORT;
+      const host = process.env.SMTP;
+      const client = new SMTPClient({
+        user: process.env.EMAIL,
+        password: process.env.PASS,
+        host: host,
+        ssl: true,
+      });
 
-      // let transporter = nodemailer.createTransport({
-      //   host: host,
-      //   port: port,
-      //   secure: false,
-      //   auth: {
-      //     user: process.env.EMAIL, // generated ethereal user
-      //     pass: process.env.PASS, // generated ethereal password
-      //   },
-      // });
-
-      // await transporter.sendMail({
-      //   from: process.env.EMAIL,
-      //   to: process.env.EMAIL,
-      //   replyTo: data.email,
-      //   subject: "[INSCRIÇÃO MENTORADOS] " + data.name,
-      //   html: `
-      //     <h2>Por que você deseja ser um de nossos mentorados?</h2>
-      //     <h4>${data.name}</h4>
-      //     <p>E-mail: ${data.email}</p>
-      //     <p>${data.message}</p>
-      //   `
-      // });
+      await client.sendAsync({
+        from: process.env.EMAIL,
+        to: process.env.EMAIL,
+        replyTo: data.email,
+        subject: "[INSCRIÇÃO MENTORADOS] " + data.name,
+        text: `
+          Por que deseja se tornar um membro da e101?
+          ${data.name}
+          E-mail: ${data.email}
+          ${data.message}
+        `,
+        attachment: [
+          {
+            data: `
+              <h3>Por que deseja se tornar um membro da e101?</h3>
+              <h4>${data.name}</h4>
+              <p>E-mail: ${data.email}</p>
+              <p>${data.message}</p>
+            `,
+            alternative: true
+          },
+        ],
+        "x-priority": "1",
+        "x-msmail-priority": "High",
+        "reply-to": "kevsonfilipesantos@gmail.com",
+        importance: "high",
+      });
 
       return response.status(200).json({
         error: null,
@@ -67,7 +76,10 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
       })
     }
   } else {
-    response.setHeader("Allow", ["POST"]);
-    return response.status(400).json({ message: "Not Found" });
+    return response.status(404).json({
+      data: null,
+      error: 'Not Found',
+      status: false,
+    })
   }
 }

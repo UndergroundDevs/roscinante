@@ -85,11 +85,6 @@ const Mentoring: NextPage = () => {
       }}>
         <div className="lo"></div>
       </div>
-      <div className="loading" style={{
-        display: !loading ? "none" : "flex"
-      }}>
-        <div className="lo"></div>
-      </div>
     </Main>
   );
 }

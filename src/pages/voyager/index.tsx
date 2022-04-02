@@ -506,7 +506,7 @@ const Home: NextPage = () => {
                 Faça parte do nosso projeto <br />
                 Inscreva-se aqui!
               </p>
-              <Link href="/mentoring">
+              <Link href="/mentored">
                 <a>
                   Inscreva-se
                 </a>

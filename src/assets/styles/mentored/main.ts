@@ -98,18 +98,29 @@ export const Main = styled.main`
     border-radius: 10px;
   }
 
-  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+  div.loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(255,255,255, .5);
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
 
-  @media screen and (max-width: 1023px) {
-  }
-
-  @media screen and (max-width: 767px) {
-  }
-
-  @media screen and (max-width: 424px) {
-  }
-
-  @media screen and (max-width: 374px) {
+  div.loading div.lo {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border-left: 10px solid #E23933;
+    border-right: 10px solid #164C97;
+    border-top: 10px solid #22343D;
+    border-bottom: 10px solid #FFCF2D;
+    animation: spin 1.5s linear infinite;
   }
 `
