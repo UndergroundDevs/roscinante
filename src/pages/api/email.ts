@@ -40,7 +40,7 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
 
       await client.sendAsync({
         from: process.env.EMAIL,
-        to: data.email,
+        to: process.env.EMAIL,
         replyTo: data.email,
         subject: "[CONTATO] " + data.name,
         text: `
