@@ -7,7 +7,6 @@ type FieldInitalInput = {
   email: string;
   message: string;
 }
-
 export default async (request: NextApiRequest, response: NextApiResponse) => {
   if (request.method === "POST") {
     const data = request.body as FieldInitalInput;
