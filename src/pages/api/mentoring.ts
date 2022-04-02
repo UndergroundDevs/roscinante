@@ -64,10 +64,3 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
     return response.status(400).json({ message: "Not Found" });
   }
 }
-
-export const config = {
-  api: {
-    // disables call to body parsing module
-    bodyParser: false,
-  }
-};

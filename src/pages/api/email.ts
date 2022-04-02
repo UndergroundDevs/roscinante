@@ -1,10 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
-
-type DataResponse = {
-  message: string;
-}
-
 type FieldInitalInput = {
   name: string;
   email: string;
@@ -13,7 +8,6 @@ type FieldInitalInput = {
 
 export default async (request: NextApiRequest, response: NextApiResponse) => {
   if (request.method === "POST") {
-    console.log(request.method);
     const data = request.body as FieldInitalInput;
 
     try {
@@ -29,10 +23,12 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
         },
       });
 
+      console.log('E-mail enviadoasdasd');
       await transporter.sendMail({
         from: process.env.EMAIL,
         to: process.env.EMAIL,
-        subject: "[CONTATO] " + data.name,
+        replyTo: data.email,
+        subject: "[INSCRIÇÃO MENTORADOS] " + data.name,
         html: `
           <h2>Por que você deseja ser um de nossos mentorados?</h2>
           <h4>${data.name}</h4>
@@ -45,7 +41,8 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
           importance: "high"
         },
       });
-      return response.status(200).json({ message: "E-mail enviado" })
+
+      return response.status(200).json({ message: "E-mail enviadoasdasd" })
     } catch (error) {
       return response.status(500).json({ message: "Houve um erro interno no servidor estamos tentando resolve-lo" })
     }
@@ -53,10 +50,3 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
     return response.status(400).json({ message: "Not Found" });
   }
 }
-
-export const config = {
-  api: {
-    // disables call to body parsing module
-    bodyParser: true,
-  }
-};
