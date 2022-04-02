@@ -4,9 +4,13 @@ import { validationContact } from 'services/validation'
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function sendEmail(request: NextApiRequest, response: NextApiResponse) {
+export default async (request: NextApiRequest, response: NextApiResponse) => {
   if (request.method === "POST") {
     const data = request.body as FieldInitalInput;
+    console.log({
+      user: process.env.EMAIL, // generated ethereal user
+      pass: process.env.PASS,
+    });
 
     if (!data) {
       return {
@@ -64,6 +68,8 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
         status: true,
       })
     } catch (error) {
+      console.log('hello');
+
       return response.status(500).json({
         data: null,
         error: 'Houve um erro interno no servidor estamos tentando resolve-lo',

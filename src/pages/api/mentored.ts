@@ -4,7 +4,7 @@ import { validationContact } from 'services/validation'
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function sendEmail(request: NextApiRequest, response: NextApiResponse) {
+export default async (request: NextApiRequest, response: NextApiResponse) => {
   if (request.method === "POST") {
     const data = request.body as FieldInitalInput;
 
