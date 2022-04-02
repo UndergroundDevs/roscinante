@@ -27,7 +27,8 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
           pass: process.env.PASS, // generated ethereal password
         },
       });
-      await transporter.sendMail({
+
+      transporter.sendMail({
         from: process.env.EMAIL,
         to: process.env.EMAIL,
         replyTo: data.email,
@@ -48,3 +49,10 @@ export default async function sendEmail(request: NextApiRequest, response: NextA
     return response.status(400).json({ message: "Not Found" });
   }
 }
+
+export const config = {
+  api: {
+    // disables call to body parsing module
+    bodyParser: false,
+  }
+};
