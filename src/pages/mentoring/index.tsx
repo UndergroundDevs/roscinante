@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useState, ChangeEvent, MouseEvent } from 'react'
 import type { NextPage } from 'next'
 import { Main } from 'assets/styles/mentoring/main'
-import { FieldInitalInput } from 'pages/voyager'
+import { FieldInitalInput } from 'pages/index'
 import { validationContact } from 'services/validation'
 
 const Mentoring: NextPage = () => {

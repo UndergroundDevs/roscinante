@@ -1,4 +1,4 @@
-import { FieldInitalInput } from 'pages/voyager'
+import { FieldInitalInput } from 'pages/index'
 import { validationContact } from 'services/validation'
 import { SMTPClient } from 'emailjs';
 import type { NextApiRequest, NextApiResponse } from 'next';
