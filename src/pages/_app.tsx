@@ -6,7 +6,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>leaning nextjs</title>
+        <title>e101</title>
         <meta name="theme-color" content="" />
         <meta
           name="description"
