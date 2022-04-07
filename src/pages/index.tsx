@@ -420,7 +420,7 @@ const Home: NextPage = () => {
                 />
               </div>
               <div className="content-text">
-                <h2 className="left-margin">Laryssa Vasconcellos (Chief Admission Officer)</h2>
+                <h2 className="left-margin">Laryssa Vasconcellos (Chief Admissions Officer)</h2>
                 <p className="left-margin">
                   Oi! Meu nome é Laryssa Vasconcellos, tenho 19 anos, e sou do Rio de Janeiro :)
                   Entrei na E101 como mentee em 2020, mas em 2021 virei mentora de DET e conquistei

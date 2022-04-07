@@ -60,7 +60,7 @@ const Mentoring: NextPage = () => {
           <input
             type="email"
             id="email"
-            placeholder="Insita seu email aqui!"
+            placeholder="Insira seu email aqui!"
             name="email"
             value={formData.email}
             onChange={handleInput}

@@ -38,12 +38,14 @@ const Footer: React.FC = () => {
     <FooterStyle>
       <section className="container-footer">
         <div className="content-logo">
-          <a href="" className="logo">
-            <img
-              src="/logo-simple-color.webp"
-              alt="english 101"
-            />
-          </a>
+          <Link href="/" >
+            <a className="logo">
+              <img
+                src="/logo-simple-color.webp"
+                alt="english 101"
+              />
+            </a>
+          </Link>
           <ul>
             <li>
               <a href="https://www.instagram.com/english101asl/" target="_blank" rel="noopener noreferrer">
@@ -75,7 +77,7 @@ const Footer: React.FC = () => {
             <a href="contact" onClick={onScrollStart}>Contato</a>
           </li>
           <li>
-            <a href="menbers" onClick={onScrollStart}>Menbros</a>
+            <a href="menbers" onClick={onScrollStart}>Membros</a>
           </li>
         </ul>
         <div className="news">
