@@ -492,9 +492,9 @@ export const Main = styled.main`
     section.results-white div.graph-info,
     section.results-blue div.graph-info {
       width: 300px;
-      height: auto;
+      height: 228.88px;
       min-width: 300px;
-      max-height: none;
+      max-height: 228.88px;
     }
 
     section.results-white div.graph-info svg.graphic,
