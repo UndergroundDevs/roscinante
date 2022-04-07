@@ -133,7 +133,6 @@ export const KnowProjects = styled.section`
       display: flex;
       justify-content: center;
       align-items: center;
-
       padding: 0 100px 0 0;
       width: 100%;
     }
