@@ -454,10 +454,6 @@ export const Main = styled.main`
       margin: 40px 0 20px 0;
     }
 
-    section.results-white div.text-content p {
-      font-size: 16px;
-    }
-
     section.results-blue h1 {
       padding: 20px;
       margin-bottom: 20px;
@@ -504,12 +500,12 @@ export const Main = styled.main`
     }
 
     section.results-white div.graph-info ul li h2 {
-      font-size: 14px;
+      font-size: 13px;
       width: 100px;
     }
     
     section.results-white div.graph-info ul li p {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     section.results-white div.graph-info ul li:nth-child(1) h2 {
@@ -559,78 +555,78 @@ export const Main = styled.main`
     }
     
     section.results-blue div.graph-info ul li p {
-      font-size: 14px;
+      font-size: 12px;
     }
 
     section.results-blue div.graph-info ul li:nth-child(1) h2 {
       position: absolute;
-      top: 32px;
+      top: 30px;
       right: 5px;
     }
 
     section.results-blue div.graph-info ul li:nth-child(2) h2 {
       position: absolute;
-      top: 60px;
-      right: 0px;
+      top: 55px;
+      right: 5px;
     }
 
     section.results-blue div.graph-info ul li:nth-child(3) h2 {
       position: absolute;
-      top: 88px;
+      top: 82px;
       right: 16px;
     }
 
     section.results-blue div.graph-info ul li:nth-child(4) h2 {
       position: absolute;
-      top: 115px;
+      top: 108px;
       right: 0px;
     }
 
     section.results-blue div.graph-info ul li:nth-child(5) h2 {
       position: absolute;
-      top: 144px;
-      right: 16px;
+      top: 135px;
+      right: 19px;
     }
 
     section.results-blue div.graph-info ul li:nth-child(6) h2 {
       position: absolute;
-      top: 172px;
-      right: 10px;
+      top: 161px;
+      right: 15px;
     }
 
     section.results-blue div.graph-info ul li:nth-child(1) p {
       position: absolute;
-      top: 29px;
+      top: 28px;
       right: 150px;
     }
 
     section.results-blue div.graph-info ul li:nth-child(2) p {
       position: absolute;
-      top: 58px;
+      top: 54px;
       right: 150px;
     }
 
     section.results-blue div.graph-info ul li:nth-child(3) p {
       position: absolute;
-      top: 86px;
+      top: 81px;
       right: 150px;
     }
 
     section.results-blue div.graph-info ul li:nth-child(4) p {
       position: absolute;
-      top: 114px;
+      top: 108px;
       right: 150px;
     }
     
     section.results-blue div.graph-info ul li:nth-child(5) p {
       position: absolute;
-      top: 143px;
+      top: 136px;
       right: 150px;
     }
 
     section.results-blue div.graph-info ul li:nth-child(6) p {
       position: absolute;
-      top: 171px;
+      top: 161px;
       right: 150px;
     }
   }

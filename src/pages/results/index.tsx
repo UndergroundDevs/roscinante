@@ -67,11 +67,11 @@ const Home: NextPage = () => {
                 </li>
                 <li>
                   <h2>Inglaterra</h2>
-                  <p>0</p>
+                  <p>1</p>
                 </li>
                 <li>
                   <h2>Noruega</h2>
-                  <p>0</p>
+                  <p>1</p>
                 </li>
               </ul>
             </div>
