@@ -583,7 +583,7 @@ const Home: NextPage = () => {
                   alt="english 101"
                 />
               </div>
-              <p>Eng101@gmail.com</p>
+              <p>english101asl@gmail.com</p>
             </div>
             <input type="text" id="pix" name="pix" defaultValue="Eng101@gmail.com" />
           </div>

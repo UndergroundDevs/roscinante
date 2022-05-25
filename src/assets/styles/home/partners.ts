@@ -56,7 +56,7 @@ export const Partners = styled.section`
     text-align: center;
     color: #FFFFFF;
 
-    font-size: 45px;
+    font-size: 35px;
     line-height: 30px;
     margin-left: 60px;
   }
